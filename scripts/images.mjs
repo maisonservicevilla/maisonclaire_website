@@ -20,7 +20,7 @@ for (const file of (await fs.readdir(SRC)).filter(f => /\.(jpe?g|png)$/i.test(f)
   for (const w of widths) {
     const resized = sharp(path.join(SRC, file)).rotate().resize({ width: w });
     await resized.clone().avif(w <= 800 ? { quality: 42, effort: 6 } : { quality: 52, effort: 4 }).toFile(`${OUT}/${name}-${w}.avif`);
-    await resized.clone().webp({ quality: 72 }).toFile(`${OUT}/${name}-${w}.webp`);
+    if (w <= 800) await resized.clone().webp({ quality: 72 }).toFile(`${OUT}/${name}-${w}.webp`);
   }
   manifest[name] = { w: width, h: height, widths };
   console.log('done', name, widths.join(','));
@@ -28,6 +28,7 @@ for (const file of (await fs.readdir(SRC)).filter(f => /\.(jpe?g|png)$/i.test(f)
 await fs.writeFile('src/content/images.json', JSON.stringify(manifest, null, 2));
 
 // Social image 1200x630
+for (const n of ['pool-infinity-mountain', 'exterior-day', 'bedroom-mountain-view']) await sharp(`${SRC}/${n}.jpg`).resize({ width: 1200 }).jpeg({ quality: 78 }).toFile(`public/img/${n}-1200.jpg`);
 await sharp(`${SRC}/pool-infinity-mountain.jpg`).resize(1200, 630, { fit: 'cover', position: 'centre' }).jpeg({ quality: 80 }).toFile('public/og.jpg');
 
 // Favicons from the tree mark on cream

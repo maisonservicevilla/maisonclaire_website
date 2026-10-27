@@ -11,8 +11,9 @@ export function Img({
 }: { name: Name | string; alt: string; sizes?: string; priority?: boolean; className?: string; style?: React.CSSProperties }) {
   const m = (manifest as Record<string, { w: number; h: number; widths: number[] }>)[name];
   if (!m) throw new Error(`Unknown image: ${name}`);
-  const set = (ext: string) => m.widths.map((w) => `/img/${name}-${w}.${ext} ${w}w`).join(', ');
-  const fallbackW = m.widths.includes(1200) ? 1200 : m.widths[m.widths.length - 1];
+  // AVIF at every size; WebP (fallback for older browsers) only up to 800 px to keep the site light
+  const set = (ext: string) => m.widths.filter((w) => ext === 'avif' || w <= 800).map((w) => `/img/${name}-${w}.${ext} ${w}w`).join(', ');
+  const fallbackW = 800;
   return (
     <picture>
       <source type="image/avif" srcSet={set('avif')} sizes={sizes} />

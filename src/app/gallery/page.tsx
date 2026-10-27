@@ -29,7 +29,7 @@ export default function Page() {
             <div className="gal">
               {g.items.map(([img, alt], i) => (
                 <figure key={img}>
-                  <a href={`/img/${img}-${(manifest as Record<string,{widths:number[]}>)[img].widths.slice(-1)[0]}.webp`} aria-label={`Open larger photo: ${alt}`} style={{ display: 'block' }}>
+                  <a href={`/img/${img}-${(manifest as Record<string,{widths:number[]}>)[img].widths.slice(-1)[0]}.avif`} aria-label={`Open larger photo: ${alt}`} style={{ display: 'block' }}>
                     <Img name={img} alt={alt} priority={gi === 0 && i === 0} sizes="(min-width: 1000px) 31vw, (min-width: 600px) 48vw, 100vw" style={{ width: '100%', borderRadius: 2 }} />
                   </a>
                   <figcaption className="small">{alt}</figcaption>
@@ -42,7 +42,7 @@ export default function Page() {
         <NextChapter href="/rates-booking/" title="Rates & booking" img="bedroom-warm" />
       </main>
       <JsonLd data={{ '@context': 'https://schema.org', '@type': 'ImageGallery', name: 'Maison Claire Service Villa photos', url: SITE_URL + '/gallery/',
-        image: groups.flatMap((g) => g.items.map(([img, alt]) => ({ '@type': 'ImageObject', contentUrl: `${SITE_URL}/img/${img}-${(manifest as Record<string,{widths:number[]}>)[img].widths.slice(-1)[0]}.webp`, caption: alt }))) }} />
+        image: groups.flatMap((g) => g.items.map(([img, alt]) => ({ '@type': 'ImageObject', contentUrl: `${SITE_URL}/img/${img}-${(manifest as Record<string,{widths:number[]}>)[img].widths.slice(-1)[0]}.avif`, caption: alt }))) }} />
     </>
   );
 }
