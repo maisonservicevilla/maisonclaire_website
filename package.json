@@ -1,0 +1,29 @@
+{
+  "name": "maison-claire-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "images": "node scripts/images.mjs",
+    "dev": "next dev",
+    "build": "next build && node scripts/strip-js.mjs",
+    "start": "npx serve out -l 3000",
+    "check": "node scripts/check-links.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/jost": "^5.3.0",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "serve": "^14.2.6",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,28 @@
+import { site } from '@/content/site';
+import { meta } from '@/lib/meta';
+import { Landing } from '@/components/Landing';
+
+export const metadata = meta('/family-holiday-villa-wayanad/', 'Family Holiday Villa in Wayanad | Maison Claire, Meppadi',
+  'A family-friendly holiday villa in Wayanad: four king bedrooms with bathrooms, a private pool and a full kitchen. Family accommodation in Meppadi for 8.', { image: 'living-chesterfield' });
+
+export default function Page() {
+  return (
+    <Landing path="/family-holiday-villa-wayanad/" crumb="Family holidays" heroImg="living-warm" heroAlt="Warm-lit sitting room with two beige sofas"
+      title={<>A family holiday villa in Wayanad, <em>all under one roof</em></>}
+      facts={['4 king bedrooms', '4 bathrooms', 'Private pool', 'Full kitchen']}
+      lead={<>Three generations, one house. Grandparents get a quiet room of their own, the children get the pool, and <em>everyone eats at the same table</em> at the end of the day.</>}
+      points={[
+        { h: 'A bedroom and bathroom for each family', t: <p>All four bedrooms have a king bed and an attached bathroom, so two or three families can share without anyone queuing. Bedroom 1 is on the ground floor, which helps older relatives who would rather skip the stairs.</p>, img: 'bedroom-mountain-view', alt: 'Ground-floor bedroom with a king bed and balcony' },
+        { h: 'Home cooking, if you want it', t: <p>The full kitchen means you can feed fussy eaters, babies and grandparents on their own timetable. Restaurants are about 200 m away for nights off.</p>, img: 'kitchen', alt: 'Villa kitchen with fridge and hob' },
+        { h: 'A pool only your family uses', t: <p>No strangers at the poolside. Keep an adult with the children whenever they swim, and the rest of the family can watch from the lawn.</p>, img: 'exterior-pool', alt: 'The private pool beside the villa' },
+      ]}
+      plan={{ title: <>Family days out <em>nearby</em></>, body: <><p>Kanthanpara Falls (10 km) is a short walk from the road and easy for most ages. The 900 Kandi glass bridge (9 km) is reached by jeep through the forest, so the trip there is part of the fun.</p><p>Plan bigger trips, like Edakkal Caves (24 km), for the morning, and be back at the villa for the pool by late afternoon. More ideas in <a href="/things-to-do-near-meppadi/">things to do near Meppadi</a>.</p></> }}
+      plan2={<p>Maison Claire is a family holiday home and a villa for family stay in Wayanad. As family villa accommodation it works as a villa for a family reunion, a spacious holiday villa for family gatherings, or simply a 4 bedroom villa for a family vacation. It is also a villa rental for families who would otherwise book three or four hotel rooms.</p>}
+      faqs={[
+        { q: 'How many family members can stay?', a: <p>Up to {site.sleeps} guests in four king bedrooms.{site.extraGuests ? ` ${site.extraGuests}.` : ' For more, ask before booking.'}</p>, text: `Up to ${site.sleeps} guests in four king bedrooms.` },
+        { q: 'Is there a ground-floor bedroom?', a: <p>Yes, Bedroom 1 is on the ground floor, with its own bathroom.</p>, text: 'Yes, Bedroom 1 is on the ground floor, with its own bathroom.' },
+        { q: 'Can we cook for the children?', a: <p>Yes. The kitchen has a fridge, hob, microwave and a washing machine for the inevitable muddy clothes.</p>, text: 'Yes. The kitchen has a fridge, hob, microwave and a washing machine.' },
+      ]}
+      next={{ href: '/group-stay-villa-wayanad/', title: 'Group stays', img: 'terrace-view' }} />
+  );
+}
