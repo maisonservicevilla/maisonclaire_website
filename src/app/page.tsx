@@ -10,12 +10,12 @@ import { InShort } from '@/components/Sections';
 export const metadata = meta(
   '/',
   'Private Pool Villa in Wayanad | Maison Claire, Meppadi',
-  'Book the whole of Maison Claire: a 4-bedroom villa in Meppadi, Wayanad with a private infinity pool facing the hills, a full kitchen and room for 8. Check live dates.',
+  'Book the whole of Maison Claire: a 4-bedroom villa in Meppadi, Wayanad with a private infinity pool facing the hills, a full kitchen and room for up to 12. Check live dates.',
 );
 
 const faqs: QA[] = [
   { q: 'Do we get the whole villa?', a: <p>Yes. You book the entire house, pool and garden included. No other guests stay while you are here.</p>, text: 'Yes. You book the entire house, pool and garden included. No other guests stay while you are here.' },
-  { q: 'How many people can stay?', a: <p>The villa sleeps {site.sleeps} in four king bedrooms, each with its own bathroom.{site.extraGuests ? ` ${site.extraGuests}.` : ' If your group is bigger, ask us before you book.'}</p>, text: `The villa sleeps ${site.sleeps} in four king bedrooms, each with its own bathroom.` },
+  { q: 'How many people can stay?', a: <p>The villa sleeps {site.sleeps} in four king bedrooms, each with its own bathroom.{site.extraGuests ? ` ${site.extraGuests}.` : ' If your group is bigger, ask us before you book.'}</p>, text: `The villa sleeps ${site.sleeps} in four king bedrooms, each with its own bathroom. With one extra guest in each room, it takes up to ${site.maxGuests}.` },
   { q: 'Where exactly is Maison Claire?', a: <p>In the hills around {site.locality} in south Wayanad, Kerala. The 900 Kandi glass bridge is 9 km away and Kanthanpara Falls is 10 km. <a href="/location/">See the location and directions</a>.</p>, text: `In the hills around ${site.locality} in south Wayanad, Kerala. The 900 Kandi glass bridge is 9 km away and Kanthanpara Falls is 10 km.` },
   { q: 'How do we book?', a: <p>Pick your dates in the booking window on this site. It shows live availability and the price for the whole villa. <a href="/rates-booking/">Rates and booking</a>.</p>, text: 'Pick your dates in the booking window on this website. It shows live availability and the price for the whole villa.' },
 ];
@@ -54,7 +54,7 @@ export default function Home() {
             <div className="horizon">
               <span className="cap">{site.bedrooms} king bedrooms</span>
               <span className="cap">Private infinity pool</span>
-              <span className="cap">Sleeps {site.sleeps}</span>
+              <span className="cap">Up to {site.maxGuests} guests</span>
               <span className="cap" style={{ color: 'var(--linen)' }}><span className="dd-cap-day">Morning, from the pool deck</span><span className="dd-cap-dusk">Dusk, from the pool deck</span></span>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function Home() {
             <div><b>{site.bathrooms}</b><span className="cap">Attached bathrooms</span></div>
             <div><b>{site.lounges}</b><span className="cap">Lounges</span></div>
             <div><b>1</b><span className="cap">Private infinity pool</span></div>
-            <div><b>{site.sleeps}</b><span className="cap">Guests</span></div>
+            <div><b>{site.maxGuests}</b><span className="cap">Guests, at most</span></div>
           </div>
         </section>
 

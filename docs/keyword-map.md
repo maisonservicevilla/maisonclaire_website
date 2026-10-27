@@ -58,7 +58,7 @@ Matching ignores capitals, hyphens, plurals and the words "a/an/the" (search eng
 | Spacious villa for large families | `/the-villa/` |  |
 | Holiday home with kitchen and pool | `/the-villa/` |  |
 | Best 4 bedroom villa for family vacation | — | Left out: "best" not claimed; variant "4 bedroom villa for a family vacation" used |
-| Private villa for 8 to 10 guests | — | Left out: only 8 confirmed |
+| Private villa for 8 to 10 guests | `/group-stay-villa-wayanad/` |  |
 | Four bedroom villa for family and friends | `/the-villa/` |  |
 | Peaceful villa for group stay with private pool | `/private-pool/` |  |
 | Entire villa with kitchen and parking | — | Left out: parking not confirmed yet |

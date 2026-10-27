@@ -91,7 +91,7 @@ export function Footer() {
 export function StickyBar() {
   return (
     <div className="bar" role="complementary" aria-label="Book your stay">
-      <p className="bar__t"><b>The whole villa, just for you</b>4 bedrooms · private pool · sleeps {site.sleeps}</p>
+      <p className="bar__t"><b>The whole villa, just for you</b>4 bedrooms · private pool · up to {site.maxGuests} guests</p>
       <BookButton className="btn btn--dark">Book now</BookButton>
     </div>
   );

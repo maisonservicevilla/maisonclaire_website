@@ -37,7 +37,7 @@ export default function Page() {
         </section>
 
         <InShort band>
-          <p>Maison Claire is a private pool villa in Wayanad. The pool is used only by the group staying in the villa, which makes it a private pool villa for families with children, a private holiday home with pool for your family, and a villa with a swimming pool for groups of friends. Travelling with relatives? It is a private pool villa for family trips of up to eight. If you want a peaceful villa for a group stay with a private pool, rather than a shared resort pool, this is it.</p>
+          <p>Maison Claire is a private pool villa in Wayanad. The pool is used only by the group staying in the villa, which makes it a private pool villa for families with children, a private holiday home with pool for your family, and a villa with a swimming pool for groups of friends. Travelling with relatives? It is a private pool villa for family trips of up to twelve. If you want a peaceful villa for a group stay with a private pool, rather than a shared resort pool, this is it.</p>
         </InShort>
 
         <section className="band-dark section--tight" aria-label="Pool details">

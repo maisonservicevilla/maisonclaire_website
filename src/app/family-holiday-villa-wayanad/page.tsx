@@ -3,7 +3,7 @@ import { meta } from '@/lib/meta';
 import { Landing } from '@/components/Landing';
 
 export const metadata = meta('/family-holiday-villa-wayanad/', 'Family Holiday Villa in Wayanad | Maison Claire, Meppadi',
-  'A family-friendly holiday villa in Wayanad: four king bedrooms with bathrooms, a private pool and a full kitchen. Family accommodation in Meppadi for 8.', { image: 'living-chesterfield' });
+  'A family-friendly holiday villa in Wayanad: four king bedrooms with bathrooms, a private pool and a full kitchen. Family accommodation in Meppadi for up to 12.', { image: 'living-chesterfield' });
 
 export default function Page() {
   return (
@@ -19,7 +19,7 @@ export default function Page() {
       plan={{ title: <>Family days out <em>nearby</em></>, body: <><p>Kanthanpara Falls (10 km) is a short walk from the road and easy for most ages. The 900 Kandi glass bridge (9 km) is reached by jeep through the forest, so the trip there is part of the fun.</p><p>Plan bigger trips, like Edakkal Caves (24 km), for the morning, and be back at the villa for the pool by late afternoon. More ideas in <a href="/things-to-do-near-meppadi/">things to do near Meppadi</a>.</p></> }}
       plan2={<p>Maison Claire is a family holiday home and a villa for family stay in Wayanad. As family villa accommodation it works as a villa for a family reunion, a spacious holiday villa for family gatherings, or simply a 4 bedroom villa for a family vacation. It is also a villa rental for families who would otherwise book three or four hotel rooms.</p>}
       faqs={[
-        { q: 'How many family members can stay?', a: <p>Up to {site.sleeps} guests in four king bedrooms.{site.extraGuests ? ` ${site.extraGuests}.` : ' For more, ask before booking.'}</p>, text: `Up to ${site.sleeps} guests in four king bedrooms.` },
+        { q: 'How many family members can stay?', a: <p>Up to {site.maxGuests}: two in each of the four king bedrooms, plus one extra guest per room.</p>, text: `Up to ${site.maxGuests}: two in each of the four king bedrooms, plus one extra guest per room.` },
         { q: 'Is there a ground-floor bedroom?', a: <p>Yes, Bedroom 1 is on the ground floor, with its own bathroom.</p>, text: 'Yes, Bedroom 1 is on the ground floor, with its own bathroom.' },
         { q: 'Can we cook for the children?', a: <p>Yes. The kitchen has a fridge, hob, microwave and a washing machine for the inevitable muddy clothes.</p>, text: 'Yes. The kitchen has a fridge, hob, microwave and a washing machine.' },
       ]}

@@ -25,7 +25,8 @@ export const site = {
   bedrooms: 4,
   bathrooms: 4,
   bedType: 'king',
-  sleeps: 8, // Airbnb description, Expedia and MakeMyTrip all say up to 8
+  sleeps: 8, // standard: 2 per bedroom
+  maxGuests: 12, // confirmed by owner: 2 + 1 extra in each of the 4 rooms
   checkOut: '11 AM',
   checkOut24: '11:00',
   floors: 2,
@@ -36,7 +37,7 @@ export const site = {
   // ---- OWNER TO CONFIRM (null = hidden on the site) ----
   checkIn: null as string | null, // Airbnb says 3 PM, MakeMyTrip says 2 PM
   checkIn24: null as string | null,
-  extraGuests: null as string | null, // e.g. 'Up to 4 more guests on extra mattresses, at an extra charge'
+  extraGuests: 'With one extra guest in each room, it takes up to 12' as string | null,
   pets: null as string | null, // Airbnb says no pets, Expedia says one pet allowed
   events: null as string | null,
   wifi: null as boolean | null,

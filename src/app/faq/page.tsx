@@ -13,7 +13,7 @@ const groups: { title: string; items: QA[] }[] = [
   { title: 'The villa', items: [
     T('Do we get the whole villa?', 'Yes. Maison Claire is rented as a whole house to one group at a time. The pool, garden, kitchen and all four bedrooms are yours.'),
     T('How many bedrooms and bathrooms are there?', `${site.bedrooms} bedrooms, each with a king bed and its own attached bathroom with a walk-in shower.`),
-    T('How many guests can stay?', `The villa sleeps ${site.sleeps}.${site.extraGuests ? ' ' + site.extraGuests + '.' : ' For a bigger group, ask before you book.'}`),
+    T('How many guests can stay?', `Up to ${site.maxGuests}. The four king bedrooms sleep ${site.sleeps}, and each room takes one extra guest.`),
     T('Are the bedrooms air-conditioned?', site.ac ? 'Yes, the bedrooms have air conditioning.' : 'Please ask us before you book.'),
     T('Is there a kitchen?', 'Yes, a full kitchen with fridge, hob and chimney, microwave and a washing machine, plus a dining table for eight.'),
     T('Is the pool private?', 'Yes. The infinity-edge pool is only for your group, and it has underwater lights for evening swims.'),

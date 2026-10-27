@@ -23,7 +23,7 @@ export default function Page() {
       <p>Meppadi is about 12 km from Kalpetta, the district headquarters. Buses run from Kalpetta to Meppadi, and jeeps run from Meppadi into the forest areas such as 900 Kandi. By train, the nearest station is Kozhikode, about 78 km away; Calicut International Airport is about 87 km. Coming from Bangalore, see the <a href="/bangalore-to-wayanad/">Bangalore to Wayanad route guide</a>.</p>
 
       <h2>A private villa in Meppadi</h2>
-      <p>Maison Claire is a {site.bedrooms}-bedroom service villa in the hills around Meppadi. You rent the whole house: four king bedrooms with attached bathrooms, three lounges, a full kitchen and a private infinity pool facing the mountains. It sleeps {site.sleeps}, which suits families and groups who would otherwise need several hotel rooms.</p>
+      <p>Maison Claire is a {site.bedrooms}-bedroom service villa in the hills around Meppadi. You rent the whole house: four king bedrooms with attached bathrooms, three lounges, a full kitchen and a private infinity pool facing the mountains. It sleeps {site.sleeps}, or up to {site.maxGuests} with an extra guest in each room, which suits families and groups who would otherwise need several hotel rooms.</p>
       <p>Restaurants are about 200 m from the villa, and there is a medical college about 3 km away. <a href="/the-villa/">See the villa</a> or <a href="/rates-booking/">check your dates</a>.</p>
 
       <h2>A note on 2024</h2>

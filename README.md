@@ -20,7 +20,7 @@ published. Fill these in and redeploy:
 | Field | Why it matters | Current state |
 |---|---|---|
 | `checkIn` / `checkIn24` | Shown on FAQ, house rules, schema | Airbnb says 3 PM, MakeMyTrip says 2 PM. Hidden. |
-| `extraGuests` | Group pages, FAQ | MakeMyTrip says +6 at extra cost, Airbnb header says 12. Hidden. |
+| `sleeps` / `maxGuests` | Everywhere guests are mentioned | Confirmed: 8 standard, 12 maximum (2 + 1 extra per room). |
 | `pets` | FAQ, house rules | Airbnb says no, Expedia says yes. Hidden. |
 | `events` | House rules | Unknown. Hidden. |
 | `wifi`, `parking`, `powerBackup` | Amenity lists, schema, parking keywords | Unknown. Hidden. |

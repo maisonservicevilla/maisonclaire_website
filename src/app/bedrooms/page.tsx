@@ -67,7 +67,7 @@ export default function Page() {
                   <tr><td>Bedroom 4</td><td>King</td><td>Attached</td><td>Yes</td></tr>
                 </tbody>
               </table>
-              <p>Total: {site.sleeps} guests in four king beds.{site.extraGuests ? ` ${site.extraGuests}.` : ' Bringing more people? Ask before you book.'}</p>
+              <p>{site.sleeps} guests sleep in the four king beds. Each room also takes one extra guest, so the villa sleeps up to {site.maxGuests}.</p>
             </div>
           </div>
         </section>

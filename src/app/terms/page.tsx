@@ -17,7 +17,7 @@ export default function Page() {
             <h2>Prices and payment</h2>
             <p>The price shown in the booking window is for the whole villa for the dates and number of guests you choose. Payment, deposit and cancellation terms are shown in the booking window before you confirm, and they form part of your booking.</p>
             <h2>Guests</h2>
-            <p>The villa sleeps up to {site.sleeps} guests unless we agree otherwise in writing. Every guest must show a valid photo ID, and the main guest must be 18 or older.</p>
+            <p>The villa sleeps up to {site.maxGuests} guests (two per bedroom plus one extra in each room) unless we agree otherwise in writing. Every guest must show a valid photo ID, and the main guest must be 18 or older.</p>
             <h2>Check-out</h2>
             <p>Check-out is by {site.checkOut}.{site.checkIn ? ` Check-in is from ${site.checkIn}.` : ''}</p>
             <h2>House rules</h2>

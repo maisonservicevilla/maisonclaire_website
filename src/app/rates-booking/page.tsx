@@ -10,7 +10,7 @@ export const metadata = meta('/rates-booking/', 'Book a 4 Bedroom Villa in Wayan
   'See live availability and the price for the whole of Maison Claire, a 4-bedroom private pool villa in Meppadi, Wayanad. One price for the villa, sleeps 8.', { image: 'bedroom-warm' });
 
 const faqs: QA[] = [
-  { q: 'Is the price for the whole villa?', a: <p>Yes. One nightly price covers the entire house for your group of up to {site.sleeps}. The booking window shows the exact total, with any taxes, before you confirm.</p>, text: `Yes. One nightly price covers the entire house for a group of up to ${site.sleeps}. The booking window shows the exact total before you confirm.` },
+  { q: 'Is the price for the whole villa?', a: <p>Yes. One nightly price covers the entire house for your group of up to {site.maxGuests}. The booking window shows the exact total, with any taxes, before you confirm.</p>, text: `Yes. One nightly price covers the entire house for a group of up to ${site.maxGuests}. The booking window shows the exact total before you confirm.` },
   { q: 'Is my booking confirmed straight away?', a: <p>The booking window tells you at each step whether you are sending a request or confirming a stay. You will get a confirmation once it is booked.</p>, text: 'The booking window tells you at each step whether you are sending a request or confirming a stay. You will get a confirmation once it is booked.' },
   { q: 'Can we book on Airbnb or Booking.com instead?', a: <p>Yes, Maison Claire is listed on {Object.keys(site.listings).slice(0, 3).join(', ')} and more. Booking here goes straight to us.</p>, text: 'Yes, Maison Claire is also listed on Airbnb, Booking.com and MakeMyTrip. Booking on this website goes straight to the villa.' },
   { q: 'What time is check-out?', a: <p>By {site.checkOut}.{site.checkIn ? ` Check-in is from ${site.checkIn}.` : ''}</p>, text: `Check-out is by ${site.checkOut}.` },
@@ -42,7 +42,7 @@ export default function Page() {
         </section>
 
         <InShort>
-          <p>Book a 4 bedroom villa in Wayanad directly: Maison Claire is a villa rental for families and groups of up to {site.sleeps}, priced for the whole villa rather than per room.</p>
+          <p>Book a 4 bedroom villa in Wayanad directly: Maison Claire is a villa rental for families and groups of up to {site.maxGuests}, priced for the whole villa rather than per room.</p>
         </InShort>
 
         <section className="band-dark section--tight">

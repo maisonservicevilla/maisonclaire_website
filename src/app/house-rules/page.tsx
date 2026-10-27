@@ -11,7 +11,7 @@ export default function Page() {
   const rules: [string, string][] = [
     ['Check-out', `By ${site.checkOut}.${site.checkIn ? ` Check-in from ${site.checkIn}.` : ''}`],
     ['Self check-in', 'You let yourselves in with a door keypad. The code is shared before arrival.'],
-    ['Guests', `Up to ${site.sleeps} guests.${site.extraGuests ? ' ' + site.extraGuests + '.' : ' Anyone beyond that needs to be agreed before you arrive.'}`],
+    ['Guests', `Up to ${site.maxGuests} guests: two per bedroom, plus one extra guest in each room.`],
     ['Photo ID', 'Every guest needs one: passport, Aadhaar, driving licence or another government ID.'],
     ['Main guest', 'The person who books must be 18 or older and stay at the villa.'],
     ['Pool safety', 'There is no lifeguard. Please keep an adult with children whenever they are near the pool.'],

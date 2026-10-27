@@ -7,7 +7,7 @@ import { BookingBand, TitleBlock } from '@/components/Sections';
 import { InShort } from '@/components/Sections';
 
 export const metadata = meta('/the-villa/', '4 Bedroom Villa with Private Pool in Meppadi | Maison Claire',
-  'A two-storey, four-bedroom holiday home in Meppadi, Wayanad: king beds, attached bathrooms, three lounges, a full kitchen and a private infinity pool. Sleeps 8.', { image: 'exterior-day' });
+  'A two-storey, four-bedroom holiday home in Meppadi, Wayanad: king beds, attached bathrooms, three lounges, a full kitchen and a private infinity pool. Sleeps up to 12.', { image: 'exterior-day' });
 
 export default function Page() {
   return (
@@ -25,7 +25,7 @@ export default function Page() {
           <dl className="glance">
             <div><dt className="cap cap--muted">Bedrooms</dt><dd>{site.bedrooms}, king beds</dd></div>
             <div><dt className="cap cap--muted">Bathrooms</dt><dd>{site.bathrooms}, attached</dd></div>
-            <div><dt className="cap cap--muted">Sleeps</dt><dd>{site.sleeps} guests</dd></div>
+            <div><dt className="cap cap--muted">Sleeps</dt><dd>{site.sleeps}–{site.maxGuests} guests</dd></div>
             <div><dt className="cap cap--muted">Pool</dt><dd>Private, infinity edge</dd></div>
             <div><dt className="cap cap--muted">Check-out</dt><dd>{site.checkOut}</dd></div>
           </dl>
