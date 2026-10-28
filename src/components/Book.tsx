@@ -64,3 +64,26 @@ function watch(){
 function later(){(window.requestIdleCallback||setTimeout)(watch,{timeout:2500})}
 if(document.readyState==='complete')setTimeout(later,800);else addEventListener('load',function(){setTimeout(later,800)});
 })();`;
+
+/**
+ * Sticky header behaviour (plain JS, ~0.5 KB):
+ * - after 40px of scrolling the header turns solid (on photo pages it starts transparent)
+ * - on phones it slides away while you scroll down and comes back when you scroll up;
+ *   the booking bar at the bottom of the screen stays put. On desktop it never hides.
+ */
+export const headerScript = `(function(){
+var d=document.documentElement,last=window.scrollY,busy=false;
+function upd(){
+  var y=window.scrollY;
+  d.classList.toggle('hdr-scrolled',y>40);
+  var open=document.querySelector('.menu[open]');
+  if(window.innerWidth<1000&&!open){
+    if(y>last+8&&y>360)d.classList.add('hdr-hidden');
+    else if(y<last-8||y<360)d.classList.remove('hdr-hidden');
+  }else d.classList.remove('hdr-hidden');
+  last=y;busy=false;
+}
+addEventListener('scroll',function(){if(!busy){busy=true;requestAnimationFrame(upd)}},{passive:true});
+addEventListener('resize',upd,{passive:true});
+upd();
+})();`;

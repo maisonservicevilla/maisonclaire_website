@@ -19,7 +19,14 @@ export function Header({ current, over = false }: { current?: string; over?: boo
       <a className="skip" href="#main">Skip to content</a>
       <div className="wrap hdr__in">
         <a href="/" className="hdr__logo" aria-label="Maison Claire Service Villa, home">
-          <img src={over ? '/brand/logo-cream.svg' : '/brand/logo-dark.svg'} alt="Maison Claire Service Villa" width={662} height={150} />
+          {over ? (
+            <>
+              <img className="logo--photo" src="/brand/logo-cream.svg" alt="Maison Claire Service Villa" width={662} height={150} />
+              <img className="logo--paper" src="/brand/logo-dark.svg" alt="" aria-hidden="true" width={662} height={150} loading="lazy" />
+            </>
+          ) : (
+            <img src="/brand/logo-dark.svg" alt="Maison Claire Service Villa" width={662} height={150} />
+          )}
         </a>
         <nav className="hdr__nav" aria-label="Main">
           {nav.map((n) => (

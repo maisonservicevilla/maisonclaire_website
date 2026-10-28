@@ -4,7 +4,7 @@ import './globals.css';
 import { SITE_URL, site } from '@/content/site';
 import { Footer, StickyBar } from '@/components/Chrome';
 import { JsonLd } from '@/components/Bits';
-import { bookingLoader } from '@/components/Book';
+import { bookingLoader, headerScript } from '@/components/Book';
 
 const serif = localFont({
   src: [
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <StickyBar />
         <JsonLd data={{ '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_URL + '/#website', name: site.name, alternateName: 'Maison Claire Wayanad', url: SITE_URL + '/', inLanguage: 'en-IN', publisher: { '@id': SITE_URL + '/#villa' } }} />
-        <script id="bk-loader" dangerouslySetInnerHTML={{ __html: bookingLoader }} />
+        <script id="bk-loader" dangerouslySetInnerHTML={{ __html: bookingLoader + headerScript }} />
       </body>
     </html>
   );
