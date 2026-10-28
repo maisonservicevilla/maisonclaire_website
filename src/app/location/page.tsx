@@ -21,9 +21,9 @@ export default function Page() {
             <div className="c-1-7"><div className="ph ratio-43"><Img name="terrace-view" alt="View from the villa terrace over the trees to the hills" priority sizes="(min-width: 900px) 56vw, 100vw" /></div></div>
             <div className="c-9-4 note" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               <p className="cap cap--pool">Address</p>
-              <p className="d4">{site.name}<br />{site.fullAddress ? <>{site.fullAddress}<br /></> : null}{site.locality}, {site.district}, {site.state}</p>
-              <p className="small">The exact location is shared with you once you book.</p>
-              {site.mapUrl && <a className="btn btn--dark" href={site.mapUrl} target="_blank" rel="noopener">Open in Google Maps</a>}
+              <p className="d4">{site.name}<br />{site.fullAddress ? <>{site.fullAddress}<br /></> : null}{site.locality}, {site.district}, {site.state}{site.postalCode ? ` ${site.postalCode}` : ''}</p>
+              {site.plusCode && <p className="small">Google Maps plus code: {site.plusCode} Meppadi</p>}
+              {site.mapUrl && <a className="btn btn--dark" href={site.mapUrl} target="_blank" rel="noopener">Get directions on Google Maps</a>}
             </div>
           </div>
         </section>

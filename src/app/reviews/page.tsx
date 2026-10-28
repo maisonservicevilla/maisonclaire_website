@@ -5,7 +5,7 @@ import { Crumbs, NextChapter } from '@/components/Bits';
 import { BookingBand, TitleBlock } from '@/components/Sections';
 
 export const metadata = meta('/reviews/', 'Maison Claire Villa Wayanad Reviews | Guest Ratings',
-  `Guest ratings for Maison Claire Service Villa, Meppadi: ${site.ratings.airbnb.score}/5 on Airbnb from ${site.ratings.airbnb.count} reviews and ${site.ratings.expedia.score}/10 on Expedia from ${site.ratings.expedia.count}. Read them on each platform.`);
+  `Guest ratings for Maison Claire Service Villa, Meppadi: ${site.ratings.google.score.toFixed(1)}/5 on Google from ${site.ratings.google.count} reviews, ${site.ratings.airbnb.score}/5 on Airbnb from ${site.ratings.airbnb.count} reviews and ${site.ratings.expedia.score}/10 on Expedia. Read them on each platform.`);
 
 export default function Page() {
   const r = site.ratings;
@@ -17,7 +17,13 @@ export default function Page() {
           title={<>Maison Claire reviews: <em>what guests have said</em></>}
           intro={<p>We don't copy reviews onto this site. Here are the scores, and links to read every review where it was written.</p>} />
         <section className="wrap" style={{ paddingBottom: 'var(--space)' }}>
-          <div className="cards">
+          <div className="cards cards--3">
+            <div className="stack" style={{ borderTop: '1px solid var(--bark)', paddingTop: 20 }}>
+              <p className="cap cap--pool">Google</p>
+              <p className="serif" style={{ fontSize: 'clamp(72px,9vw,120px)', lineHeight: .9 }}>{r.google.score.toFixed(1)}<span style={{ fontSize: '0.3em' }}> / {r.google.outOf}</span></p>
+              <p className="small">{r.google.count} reviews, as of {r.asOf}</p>
+              {site.mapUrl && <a className="textlink" href={site.mapUrl} target="_blank" rel="noopener">Read the reviews on Google</a>}
+            </div>
             <div className="stack" style={{ borderTop: '1px solid var(--bark)', paddingTop: 20 }}>
               <p className="cap cap--pool">Airbnb</p>
               <p className="serif" style={{ fontSize: 'clamp(72px,9vw,120px)', lineHeight: .9 }}>{r.airbnb.score}<span style={{ fontSize: '0.3em' }}> / {r.airbnb.outOf}</span></p>

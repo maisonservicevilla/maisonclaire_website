@@ -29,9 +29,10 @@ export function lodgingSchema() {
     description: `A private four-bedroom villa with an infinity-edge pool in ${s.locality}, ${s.district}, ${s.state}. Booked whole, for one group at a time. Sleeps ${s.sleeps}, up to ${s.maxGuests} with an extra guest per room.`,
     image: [SITE_URL + '/img/pool-infinity-mountain-1200.jpg', SITE_URL + '/img/exterior-day-1200.jpg', SITE_URL + '/img/bedroom-mountain-view-1200.jpg', SITE_URL + '/og.jpg'],
     logo: SITE_URL + '/brand/logo-dark.svg',
-    address: { '@type': 'PostalAddress', ...(s.fullAddress ? { streetAddress: s.fullAddress } : {}), addressLocality: s.locality, addressRegion: `${s.district}, ${s.state}`, addressCountry: s.country },
+    address: { '@type': 'PostalAddress', ...(s.fullAddress ? { streetAddress: s.fullAddress } : {}), ...(s.postalCode ? { postalCode: s.postalCode } : {}), addressLocality: s.locality, addressRegion: `${s.district}, ${s.state}`, addressCountry: s.country },
     ...(s.geo ? { geo: { '@type': 'GeoCoordinates', latitude: s.geo.lat, longitude: s.geo.lng } } : {}),
     ...(s.phone ? { telephone: s.phone } : {}),
+    ...(s.mapUrl ? { hasMap: s.mapUrl } : {}),
     ...(s.email ? { email: s.email } : {}),
     ...(s.checkIn24 ? { checkinTime: s.checkIn24 } : {}),
     checkoutTime: s.checkOut24,
@@ -40,7 +41,7 @@ export function lodgingSchema() {
     containsPlace: { '@type': 'Accommodation', additionalType: 'EntirePlace', numberOfBedrooms: s.bedrooms, numberOfBathroomsTotal: s.bathrooms, occupancy: { '@type': 'QuantitativeValue', maxValue: s.maxGuests }, bed: { '@type': 'BedDetails', numberOfBeds: s.bedrooms, typeOfBed: 'King' } },
     amenityFeature: amenities.map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })),
     identifier: { '@type': 'PropertyValue', name: 'Property registration number', value: s.registrationNo },
-    sameAs: [...Object.values(s.listings), s.instagram],
+    sameAs: [...Object.values(s.listings), s.instagram, ...(s.mapUrl ? [s.mapUrl] : [])],
     potentialAction: { '@type': 'ReserveAction', target: SITE_URL + '/rates-booking/' },
   };
 }

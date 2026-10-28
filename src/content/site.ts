@@ -46,17 +46,21 @@ export const site = {
   powerBackup: null as boolean | null,
   poolSize: null as string | null,
   poolHours: null as string | null,
-  fullAddress: null as string | null,
-  mapUrl: null as string | null, // Google Maps share link
-  geo: null as { lat: number; lng: number } | null,
-  phone: null as string | null, // E.164, e.g. '+919876543210'
+  fullAddress: 'Kappamkolly' as string | null, // from Google Business Profile
+  postalCode: '673577',
+  plusCode: 'H47F+F7M',
+  mapUrl: 'https://maps.google.com/?cid=16396424023182901487' as string | null, // Google Business Profile
+  geo: { lat: 11.5636875, lng: 76.1231875 } as { lat: number; lng: number } | null,
+  phone: '+918006001367' as string | null, // Google Business Profile + Instagram
+  phoneDisplay: '+91 80060 01367',
   whatsapp: null as string | null,
-  email: null as string | null,
+  email: 'maisonservicevilla@gmail.com' as string | null, // published on the villa's Instagram
 
   ratings: {
     asOf: 'October 2026',
     airbnb: { score: 4.61, outOf: 5, count: 23, sub: { Cleanliness: 4.6, Accuracy: 4.7, 'Check-in': 4.7, Communication: 4.7, Location: 4.6, Value: 4.5 } },
     expedia: { score: 9.4, outOf: 10, count: 20 },
+    google: { score: 5.0, outOf: 5, count: 22 },
   },
 
   listings: {

@@ -25,8 +25,8 @@ published. Fill these in and redeploy:
 | `events` | House rules | Unknown. Hidden. |
 | `wifi`, `parking`, `powerBackup` | Amenity lists, schema, parking keywords | Unknown. Hidden. |
 | `poolSize`, `poolHours` | Pool page | Unknown. Hidden. |
-| `fullAddress`, `mapUrl`, `geo` | Location page, Google, AI assistants | Unknown. Hidden. |
-| `phone`, `whatsapp`, `email` | Contact page, schema | Unknown. Hidden. |
+| `fullAddress`, `mapUrl`, `geo` | Location page, Google, AI assistants | From the Google Business Profile (Kappamkolly, 673577). |
+| `phone`, `whatsapp`, `email` | Contact page, schema | Phone and email from Google profile and Instagram. WhatsApp: confirm. |
 | `ac: true` | Bedrooms page and keywords | AC units are visible in the bedroom photos. **Confirm all four rooms have AC**, or set to `false`. |
 | Bedroom photos | Bedrooms page | Confirm which photo is which bedroom (`src/app/bedrooms/page.tsx`). |
 | `ratings` | Home, reviews | Figures as of October 2026. Update every few months. |

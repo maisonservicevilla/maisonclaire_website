@@ -98,9 +98,9 @@ export function Ratings({ compact = false }: { compact?: boolean }) {
     <div style={{ textAlign: compact ? 'left' : 'center' }}>
       <p className="cap cap--pool" style={{ marginBottom: 24 }}>What guests say</p>
       <p className="d3" style={{ fontSize: compact ? undefined : 'clamp(32px, 4.2vw, 58px)' }}>
-        Rated <em>{r.airbnb.score} out of {r.airbnb.outOf}</em> on Airbnb and <em>{r.expedia.score} out of {r.expedia.outOf}</em> on Expedia.
+        Rated <em>{r.google.score.toFixed(1)} out of {r.google.outOf}</em> on Google, <em>{r.airbnb.score}</em> on Airbnb and <em>{r.expedia.score} out of {r.expedia.outOf}</em> on Expedia.
       </p>
-      <p className="cap cap--muted" style={{ marginTop: 24 }}>{r.airbnb.count + r.expedia.count} reviews · as of {r.asOf}</p>
+      <p className="cap cap--muted" style={{ marginTop: 24 }}>{r.google.count + r.airbnb.count + r.expedia.count} reviews · as of {r.asOf}</p>
     </div>
   );
 }

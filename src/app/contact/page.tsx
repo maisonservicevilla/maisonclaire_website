@@ -19,10 +19,10 @@ export default function Page() {
           <dl className="ledger" style={{ maxWidth: 900 }}>
             <div><dt className="cap cap--muted">Dates and booking</dt><dd style={{ margin: 0 }}><BookButton className="btn btn--dark">Open the booking window</BookButton></dd></div>
             {site.whatsapp && <div><dt className="cap cap--muted">WhatsApp</dt><dd style={{ margin: 0 }}><a href={`https://wa.me/${site.whatsapp.replace(/\D/g, '')}`}>Message us</a></dd></div>}
-            {site.phone && <div><dt className="cap cap--muted">Phone</dt><dd style={{ margin: 0 }}><a href={`tel:${site.phone}`}>{site.phone}</a></dd></div>}
+            {site.phone && <div><dt className="cap cap--muted">Phone</dt><dd style={{ margin: 0 }}><a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></dd></div>}
             {site.email && <div><dt className="cap cap--muted">Email</dt><dd style={{ margin: 0 }}><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>}
             <div><dt className="cap cap--muted">Instagram</dt><dd style={{ margin: 0 }}><a href={site.instagram} target="_blank" rel="noopener">@maison.claire_</a></dd></div>
-            <div><dt className="cap cap--muted">Where</dt><dd style={{ margin: 0, textAlign: 'right' }}>{site.fullAddress ? site.fullAddress + ', ' : ''}{site.locality}, {site.district}, {site.state}</dd></div>
+            <div><dt className="cap cap--muted">Where</dt><dd style={{ margin: 0, textAlign: 'right' }}>{site.fullAddress ? site.fullAddress + ', ' : ''}{site.locality}, {site.district}, {site.state} {site.postalCode}{site.mapUrl && <><br /><a href={site.mapUrl} target="_blank" rel="noopener">Google Maps</a></>}</dd></div>
           </dl>
           <p className="small" style={{ marginTop: 24 }}>Booked through Airbnb, Booking.com or another site? Message us through that site so your booking details stay in one place.</p>
         </section>
