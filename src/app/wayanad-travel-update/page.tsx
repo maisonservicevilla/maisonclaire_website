@@ -9,7 +9,7 @@ export default function Page() {
     <Guide path="/wayanad-travel-update/" crumbs={[['/location/', 'Location'], ['/wayanad-travel-update/', 'Travel update']]}
       title={<>Wayanad travel update, <em>October 2026</em></>} headline="Is Wayanad safe to visit now? Travel update, October 2026" description={d}
       intro={<p>A short, dated note on visiting Meppadi and Wayanad. We update it when something changes.</p>}
-      img="balcony-view" imgAlt="Balcony chairs at the villa facing the hills"
+      img="balcony-view" imgAlt="Balcony chairs at the villa facing the hills" imgCaption="The view from a bedroom balcony at Maison Claire, Meppadi."
       aside={<FactBox title="Right now" rows={[['Season', 'Post-monsoon'], ['Mornings', 'Mist on high ground'], ['Tourist spots', 'Open; may close on heavy-rain alerts'], ['Last checked', UPDATED_TEXT]]} />}
       sources={[
         ['Onmanorama: Wayanad draped in mist as tourists flock to the hills (19 Oct 2026)', 'https://www.onmanorama.com/news/kerala/2026/10/19/wayanad-draped-in-mist-as-tourists-flock-to-the-hills.html'],

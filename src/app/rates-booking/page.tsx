@@ -7,7 +7,7 @@ import { Crumbs, Faq, type QA } from '@/components/Bits';
 import { InShort } from '@/components/Sections';
 
 export const metadata = meta('/rates-booking/', 'Book a 4 Bedroom Villa in Wayanad | Rates & Live Dates',
-  'See live availability and the price for the whole of Maison Claire, a 4-bedroom private pool villa in Meppadi, Wayanad. One price for the villa, sleeps 8.', { image: 'bedroom-warm' });
+  'See live availability and the price for the whole of Maison Claire, a 4-bedroom private pool villa in Meppadi, Wayanad. One price for the villa, sleeps up to 12.', { image: 'exterior-day' });
 
 const faqs: QA[] = [
   { q: 'Is the price for the whole villa?', a: <p>Yes. One nightly price covers the entire house for your group of up to {site.maxGuests}. The booking window shows the exact total, with any taxes, before you confirm.</p>, text: `Yes. One nightly price covers the entire house for a group of up to ${site.maxGuests}. The booking window shows the exact total before you confirm.` },
@@ -22,21 +22,28 @@ export default function Page() {
       <Header current="/rates-booking/" />
       <main id="main">
         <section className="wrap" style={{ paddingTop: 'clamp(24px,5vw,56px)', paddingBottom: 'var(--space)' }}>
-          <div className="g12" style={{ alignItems: 'start' }}>
-            <div className="c-1-5" style={{ display: 'grid', gap: 20 }}>
+          <div className="g12 book">
+            <div className="c-1-5 book__intro" style={{ display: 'grid', gap: 20 }}>
               <Crumbs items={[['/rates-booking/', 'Rates & booking']]} />
-              <h1 className="d1" style={{ fontSize: 'clamp(42px,6vw,88px)' }}>Book a 4-bedroom villa in Wayanad, <em>see live dates</em></h1>
+              <h1 className="d1" style={{ fontSize: 'clamp(42px,4.8vw,72px)' }}>Book a 4{'\u2011'}bedroom villa in Wayanad, <em>see live dates</em></h1>
               <p className="lead">Choose your dates and the number of guests. You will see what is free and the total price for the whole villa before you confirm anything.</p>
-              <ol className="ledger" style={{ marginTop: 8 }}>
+            </div>
+            <div className="c-7-6 book__form">
+              <h2 className="cap cap--pool" style={{ marginBottom: 16 }}>Live availability</h2>
+              <BookingMount mode="inline" title="Booking form with live availability" />
+            </div>
+            <div className="c-1-5 book__more" style={{ display: 'grid', gap: 28 }}>
+              <div className="trust">
+                <div><b>Rated {site.ratings.google.score.toFixed(1)} on Google</b><span>{site.ratings.google.count} reviews, plus {site.ratings.airbnb.score} on Airbnb and {site.ratings.expedia.score}/10 on Expedia. <a href="/reviews/">Read them</a></span></div>
+                {site.phone && <div><b>Questions before you book?</b><span>Call <a href={`tel:${site.phone}`}>{site.phoneDisplay}</a>{site.email ? <> or <a href={`mailto:${site.email}`}>email us</a></> : null}.</span></div>}
+                <div><b>No surprises</b><span>The total, with any taxes, and the cancellation terms are shown before you pay.</span></div>
+              </div>
+              <ol className="ledger steps">
                 <li><span className="cap cap--pool">1</span><span style={{ flex: 1 }}>Pick your dates and group size</span></li>
                 <li><span className="cap cap--pool">2</span><span style={{ flex: 1 }}>See the price for the whole villa</span></li>
                 <li><span className="cap cap--pool">3</span><span style={{ flex: 1 }}>Confirm, and you are booked</span></li>
               </ol>
-              <div className="ph ratio-45" style={{ marginTop: 16 }}><Img name="bedroom-warm" alt="Warm-lit bedroom with a king bed and carved headboard" priority sizes="(min-width: 900px) 38vw, 100vw" /></div>
-            </div>
-            <div className="c-7-6">
-              <h2 className="cap cap--pool" style={{ marginBottom: 16 }}>Live availability</h2>
-              <BookingMount mode="inline" title="Booking form with live availability" />
+              <div className="ph ratio-43 book__img"><Img name="exterior-day" alt="The two-storey villa and its lawn in daylight" sizes="(min-width: 900px) 38vw, 1px" /></div>
             </div>
           </div>
         </section>
@@ -51,13 +58,13 @@ export default function Page() {
               <p className="cap" style={{ color: 'var(--linen)' }}>What you pay for</p>
               <h2 className="d2">One price for <em>the whole villa</em></h2>
             </div>
-            <ul className="c-7-6 ticks" style={{ color: 'var(--paper)' }}>
-              <li style={{ borderColor: 'var(--line-dark)' }}>All four king bedrooms</li>
-              <li style={{ borderColor: 'var(--line-dark)' }}>Four attached bathrooms</li>
-              <li style={{ borderColor: 'var(--line-dark)' }}>Private infinity pool</li>
-              <li style={{ borderColor: 'var(--line-dark)' }}>Full kitchen and dining for 8</li>
-              <li style={{ borderColor: 'var(--line-dark)' }}>Three lounges</li>
-              <li style={{ borderColor: 'var(--line-dark)' }}>Garden and balconies</li>
+            <ul className="c-7-6 ticks">
+              <li>All four king bedrooms</li>
+              <li>Four attached bathrooms</li>
+              <li>Private infinity pool</li>
+              <li>Full kitchen and dining for 8</li>
+              <li>Three lounges</li>
+              <li>Garden and balconies</li>
             </ul>
           </div>
         </section>

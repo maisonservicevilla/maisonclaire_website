@@ -12,7 +12,7 @@ export function Crumbs({ items }: { items: [string, string][] }) {
       <nav aria-label="Breadcrumb">
         <ol className="crumbs cap">
           {all.map(([h, l], i) => (
-            <li key={h}>{i === all.length - 1 ? <span aria-current="page" style={{ color: 'var(--pool)' }}>{l}</span> : <a href={h}>{l}</a>}</li>
+            <li key={h}>{i === all.length - 1 ? <span aria-current="page">{l}</span> : <a href={h}>{l}</a>}</li>
           ))}
         </ol>
       </nav>
@@ -39,7 +39,7 @@ export function NextChapter({ href, title, img, alt }: { href: string; title: st
       <div className="wrap next__in">
         <div>
           <p className="cap cap--muted" style={{ marginBottom: 10 }}>Next</p>
-          <p className="next__t">{title} <em aria-hidden="true">→</em></p>
+          <p className="next__t">{title.split(' ').slice(0, -1).join(' ')}{title.includes(' ') ? ' ' : ''}<span className="nowrap">{title.split(' ').slice(-1)[0]}{'\u00a0'}<em aria-hidden="true">→</em></span></p>
         </div>
         <div className="ph ratio-169"><Img name={img} alt={alt || ''} sizes="320px" /></div>
       </div>
@@ -77,7 +77,7 @@ export function Ribbon() {
   }
   return (
     <ol className="ribbon" aria-label={`Road distances from ${site.shortName}`}>
-      <li><span className="cap">{site.shortName}</span><span className="small">0 km</span></li>
+      <li><span className="serif">{site.shortName}</span><span className="cap cap--muted">0 km</span></li>
       {merged.map((it, i) => {
         const last = i === merged.length - 1;
         const cls = last ? 'last down' : i % 2 === 0 ? 'up' : 'down';

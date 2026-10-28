@@ -9,10 +9,10 @@ export default function Page() {
     <Guide path="/900-kandi-glass-bridge/" crumbs={[['/things-to-do-near-meppadi/', 'Things to do'], ['/900-kandi-glass-bridge/', '900 Kandi glass bridge']]}
       title={<>900 Kandi <em>glass bridge</em></>} headline="900 Kandi glass bridge, Wayanad: how to visit and where to stay" description={d}
       intro={<p>A forest estate above Meppadi with off-road tracks and a glass bridge over the trees. It is 9 km from Maison Claire.</p>}
-      img="terrace-view" imgAlt="Forested hills seen from the villa terrace"
+      img="terrace-view" imgAlt="Forested hills seen from the villa terrace" imgCaption="Forested hills from the terrace at Maison Claire. The bridge is 9 km away."
       aside={<FactBox rows={[['From the villa', '9 km'], ['From Meppadi town', 'About 14 km'], ['Getting there', 'Jeep from Meppadi'], ['Tickets', 'Bought at the site'], ['Best season', 'October to May']]} />}
       sources={[['Wikipedia: 900 Kandi', 'https://en.wikipedia.org/wiki/900_Kandi'], ['Housing.com: Wayanad glass bridge guide', 'https://housing.com/news/travellers-guide-to-wayanad-glass-bridge']]}
-      next={{ href: '/kanthanpara-waterfalls/', title: 'Kanthanpara Falls', img: 'pool-view-portrait' }}
+      next={{ href: '/kanthanpara-waterfalls/', title: 'Kanthanpara Falls', img: 'exterior-path' }}
       about={{ '@type': 'TouristAttraction', name: '900 Kandi', address: { '@type': 'PostalAddress', addressLocality: 'Meppadi', addressRegion: 'Wayanad, Kerala', addressCountry: 'IN' } }}>
       <h2>What 900 Kandi is</h2>
       <p>900 Kandi is an estate inside the forest above Meppadi. The name comes from a 900-acre farm owned by an early settler; the land has grown since, but the name stuck. The area became better known after the 2015 Malayalam film <em>Lord Livingstone 7000 Kandi</em> was shot there.</p>

@@ -36,26 +36,21 @@ export default function Home() {
             </div>
           </div>
           <div className="wrap hero__body" style={{ paddingTop: 120 }}>
-            <p className="cap" style={{ color: 'var(--linen)', marginBottom: 18 }}>Meppadi · Wayanad · Kerala</p>
-            <div className="hero__row">
-              <h1 className="d1">A private pool villa in Wayanad, <em>facing the hills</em></h1>
-              <div className="stack-s" style={{ paddingBottom: 8 }}>
-                <span className="cap" style={{ color: 'var(--linen)', display: 'block' }}>See it at</span>
-                <div className="dd" role="group" aria-label="Show the pool by day or at dusk">
-                  <label htmlFor="dd-day">Day</label>
-                  <label htmlFor="dd-dusk">Dusk</label>
-                </div>
-              </div>
-            </div>
+            <p className="cap" style={{ color: 'var(--linen)', marginBottom: 18 }}>Private villa · Meppadi · Kerala</p>
+            <h1 className="d1">A private pool villa in Wayanad, <em>facing the hills</em></h1>
             <div className="hero__ctas">
               <BookButton className="btn btn--light">Check dates</BookButton>
               <a href="/the-villa/" className="btn btn--line-light">See the villa</a>
+              <div className="dd" role="group" aria-label="Show the pool by day or at dusk">
+                <label htmlFor="dd-day">Day</label>
+                <label htmlFor="dd-dusk">Dusk</label>
+              </div>
             </div>
             <div className="horizon">
               <span className="cap">{site.bedrooms} king bedrooms</span>
               <span className="cap">Private infinity pool</span>
               <span className="cap">Up to {site.maxGuests} guests</span>
-              <span className="cap" style={{ color: 'var(--linen)' }}><span className="dd-cap-day">Morning, from the pool deck</span><span className="dd-cap-dusk">Dusk, from the pool deck</span></span>
+              <span className="cap">Meppadi, Wayanad</span>
             </div>
           </div>
         </section>
@@ -66,7 +61,7 @@ export default function Home() {
             <h2 className="sr-only">The whole villa, just for your group</h2>
             <p className="d3">
               Maison Claire is a two-storey villa in the hills of Meppadi. You book <em>the whole house</em>: four king bedrooms, three lounges,
-              a full kitchen and an infinity pool that looks straight out at the mountains.
+              a full kitchen and an infinity pool that looks straight out at the mountains. A four-bedroom holiday home in Wayanad, rented whole.
             </p>
             <p style={{ marginTop: 32 }}><a className="textlink" href="/the-villa/">Walk through the house →</a></p>
           </Chapter>
@@ -94,7 +89,7 @@ export default function Home() {
         </section>
 
         <InShort>
-          <p>Maison Claire is an entire villa for rent in Wayanad: a four-bedroom holiday home in Wayanad, in the hills near Meppadi, with a private pool, a fully equipped kitchen and three living rooms. One group books the whole house at a time, which makes it an exclusive holiday villa. It works as a private villa for family stay, a villa for friends and family in Wayanad, or a peaceful villa stay in Wayanad for two. If you are looking for a private villa in Meppadi, Wayanad, or a holiday villa near Meppadi, Wayanad, you can book this 4 bedroom villa directly on this site and see live dates.</p>
+          <p>Maison Claire is an entire villa for rent in Wayanad: a private villa in Meppadi, Wayanad, let to one group at a time, with the pool, kitchen and three lounges to yourselves. That makes it an exclusive holiday villa for families, and a villa for friends and family in Wayanad who want a peaceful villa stay in Wayanad rather than a hotel. If you are looking for a holiday villa near Meppadi, Wayanad, you can see live dates and book it here.</p>
         </InShort>
 
         {/* 02 INSIDE */}
@@ -132,7 +127,10 @@ export default function Home() {
         <section className="section--tight" style={{ borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)' }}>
           <div className="wrap" style={{ maxWidth: 1100 }}>
             <Ratings />
-            <p style={{ textAlign: 'center', marginTop: 28 }}><a className="textlink" href="/reviews/">Read the reviews</a></p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '12px 28px', marginTop: 28 }}>
+              <BookButton className="btn btn--dark">Check dates</BookButton>
+              <a className="textlink" href="/reviews/">Read the reviews</a>
+            </div>
           </div>
         </section>
 
@@ -141,20 +139,20 @@ export default function Home() {
           <Chapter n="05" label="Made for">
             <h2 className="d2">Time together, <em>without sharing walls</em></h2>
           </Chapter>
-          <div className="cards cards--3">
+          <div className="cards cards--3 snap">
             <a className="card" href="/family-holiday-villa-wayanad/">
               <div className="ph ratio-43"><Img name="living-chesterfield" alt="Sitting room with two beige sofas" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 45vw, 100vw" /></div>
-              <h3 className="d4">Family holidays</h3>
-              <p>Grandparents, parents and children under one roof, with a kitchen for home-cooked meals.</p>
+              <h3 className="d4">Family holidays <span aria-hidden="true">→</span></h3>
+              <p>A private villa for family stay: grandparents, parents and children under one roof, with a kitchen for home-cooked meals.</p>
             </a>
             <a className="card" href="/group-stay-villa-wayanad/">
               <div className="ph ratio-43"><Img name="terrace-view" alt="Terrace looking over trees to the hills" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 45vw, 100vw" /></div>
-              <h3 className="d4">Trips with friends</h3>
+              <h3 className="d4">Trips with friends <span aria-hidden="true">→</span></h3>
               <p>Four equal king bedrooms, so nobody gets the small room. Long evenings by the pool.</p>
             </a>
             <a className="card" href="/weekend-villa-wayanad/">
               <div className="ph ratio-43"><Img name="bedroom-view-warm" alt="Warm-lit bedroom with balcony doors" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 45vw, 100vw" /></div>
-              <h3 className="d4">Weekend getaways</h3>
+              <h3 className="d4">Weekend getaways <span aria-hidden="true">→</span></h3>
               <p>Two slow days in the hills, close to waterfalls and viewpoints.</p>
             </a>
           </div>

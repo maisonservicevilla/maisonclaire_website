@@ -35,7 +35,7 @@ export function Header({ current, over = false }: { current?: string; over?: boo
           <BookButton className={over ? 'btn btn--light btn--sm hdr__book' : 'btn btn--dark btn--sm hdr__book'} />
         </nav>
         <details className="menu">
-          <summary aria-label="Menu">Menu</summary>
+          <summary><span className="m-open">Menu</span><span className="m-close">Close</span></summary>
           <div className="menu__panel">
             <nav aria-label="Site">
               <ul className="menu__list">
@@ -79,10 +79,11 @@ export function Footer() {
             </div>
           ))}
           <div>
-            <h2 className="cap">Also on</h2>
+            <h2 className="cap">Find us</h2>
             <ul className="x">
-              {Object.entries(site.listings).map(([k, v]) => <li key={k}><a href={v} rel="noopener" target="_blank">{k}</a></li>)}
-              <li><a href={site.instagram} rel="noopener" target="_blank">Instagram</a></li>
+              {site.phone && <li><a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></li>}
+              {site.mapUrl && <li><a href={site.mapUrl} rel="noopener" target="_blank">Google Maps<span className="sr-only"> (opens in a new tab)</span> ↗</a></li>}
+              <li><a href={site.instagram} rel="noopener" target="_blank">Instagram<span className="sr-only"> (opens in a new tab)</span> ↗</a></li>
             </ul>
           </div>
         </div>
@@ -98,7 +99,7 @@ export function Footer() {
 export function StickyBar() {
   return (
     <div className="bar" role="complementary" aria-label="Book your stay">
-      <p className="bar__t"><b>The whole villa, just for you</b>4 bedrooms · private pool · up to {site.maxGuests} guests</p>
+      <p className="bar__t"><b>The whole villa, yours</b><span>4 bedrooms · pool · {site.maxGuests} guests</span></p>
       <BookButton className="btn btn--dark">Book now</BookButton>
     </div>
   );

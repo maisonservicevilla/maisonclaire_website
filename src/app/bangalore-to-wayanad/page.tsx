@@ -9,12 +9,21 @@ export default function Page() {
     <Guide path="/bangalore-to-wayanad/" crumbs={[['/location/', 'Location'], ['/bangalore-to-wayanad/', 'Bangalore to Wayanad']]}
       title={<>Bangalore to Wayanad <em>by road</em></>} headline="Bangalore to Wayanad by road: route, distance and forest timings" description={d}
       intro={<p>Most people drive from Bangalore through Mysuru and the Bandipur forest. Plan around one thing above all: the forest road closes at night.</p>}
-      img="balcony-view" imgAlt="Balcony chairs at the villa facing the hills"
+      img="villa-night-pool" imgAlt="Maison Claire and its pool lit up at night" imgCaption="Maison Claire at night. Plan to arrive before dark: the forest road closes at 9 PM."
       aside={<FactBox rows={[['Distance', 'About 280–310 km'], ['Drive time', 'About 6–7.5 hours'], ['Main route', 'Via Mysuru and Bandipur'], ['Forest closed', '9 PM to 6 AM'], ['Best season', 'October to May']]} />}
       sources={[['Tejas Travels: Bangalore to Wayanad travel guide (2025)', 'https://www.tejastravels.com/blogs/travel-guides/bangalore-to-wayanad-travel-guide'], ['Wikipedia: 900 Kandi (Meppadi distances)', 'https://en.wikipedia.org/wiki/900_Kandi']]}
       next={{ href: '/location/', title: 'Location', img: 'terrace-view' }}
       about={{ '@type': 'Trip', name: 'Bangalore to Wayanad by road' }}>
       <h2>The usual route</h2>
+      <ol className="route" aria-label="Route from Bangalore to Meppadi">
+        <li><b>Bangalore</b><span>Start early</span></li>
+        <li><b>Mysuru</b><span>Good place for breakfast</span></li>
+        <li><b>Gundlupet</b><span>Last easy food stop</span></li>
+        <li className="warn"><b>Bandipur forest</b><span>Closed to traffic 9 PM to 6 AM</span></li>
+        <li><b>Sulthan Bathery</b><span>Into Kerala</span></li>
+        <li><b>Kalpetta</b><span>About 12 km to go</span></li>
+        <li><b>Meppadi</b><span>Maison Claire</span></li>
+      </ol>
       <p>From Bangalore, take the highway to Mysuru, then continue south through Gundlupet and the Bandipur forest into Kerala. On the Kerala side the road reaches Sulthan Bathery; from there drive towards Kalpetta and on to Meppadi, about 12 km beyond Kalpetta.</p>
       <p>The full trip is roughly 280 to 310 km depending on where in Bangalore you start, and takes about six to seven and a half hours with normal traffic.</p>
 

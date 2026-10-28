@@ -25,7 +25,7 @@ export default function Page() {
         <TitleBlock crumbs={<Crumbs items={[['/the-villa/', 'The villa'], ['/house-rules/', 'House rules']]} />}
           title={<>Maison Claire house rules, <em>plainly</em></>} intro={<p>A short list so everyone knows what to expect. Cancellation terms are shown in the booking window before you pay.</p>} />
         <section className="wrap" style={{ paddingBottom: 'var(--space)', maxWidth: 1000 }}>
-          <ol className="ledger">
+          <ol className="ledger rules">
             {rules.map(([k, v], i) => (
               <li key={k} style={{ justifyContent: 'flex-start', gap: 'clamp(16px,4vw,48px)' }}>
                 <span className="serif" style={{ fontSize: 26, color: 'var(--pool)', minWidth: 32 }}>{['i','ii','iii','iv','v','vi','vii','viii','ix','x'][i]}</span>

@@ -9,10 +9,10 @@ export default function Page() {
     <Guide path="/kanthanpara-waterfalls/" crumbs={[['/things-to-do-near-meppadi/', 'Things to do'], ['/kanthanpara-waterfalls/', 'Kanthanpara Falls']]}
       title={<>Kanthanpara <em>Falls</em></>} headline="Kanthanpara Falls, Wayanad: a visitor guide" description={d}
       intro={<p>A smaller, quieter waterfall in south Wayanad, a short walk from the road. It is 10 km from Maison Claire.</p>}
-      img="pool-infinity-mountain" imgAlt="The villa pool with the mountains beyond"
+      img="pool-infinity-mountain" imgAlt="The villa pool with the mountains beyond" imgCaption="The pool at Maison Claire. Kanthanpara Falls is a 10 km drive away."
       aside={<FactBox rows={[['From the villa', '10 km'], ['Height', 'About 30 m'], ['Walk', 'Short, from the road'], ['Entry', 'Small fee'], ['Reported hours', 'About 9 AM to 4:30 PM']]} />}
       sources={[['Backpackers United: Kanthanpara Waterfalls', 'https://backpackersunited.in/destinations/wayanad/attraction/kanthanpara-waterfalls'], ['Kerala Tourism: Kanthanpara Waterfalls video', 'https://www.keralatourism.org/video-gallery/kanthanpara-waterfalls/1076']]}
-      next={{ href: '/location/', title: 'Location', img: 'terrace-view' }}
+      next={{ href: '/location/', title: 'Location', img: 'exterior-day' }}
       about={{ '@type': 'TouristAttraction', name: 'Kanthanpara Waterfalls', address: { '@type': 'PostalAddress', addressRegion: 'Wayanad, Kerala', addressCountry: 'IN' } }}>
       <h2>What to expect</h2>
       <p>Kanthanpara is smaller than Soochipara and Meenmutty, with a drop of about 30 metres into a pool surrounded by rocks. Because it is less famous, it is usually calmer, and the walk in from the road is short. That makes it a good choice with children or older relatives who would struggle on a long forest path.</p>

@@ -24,7 +24,7 @@ export default function Page() {
     <>
       <Header current="/things-to-do-near-meppadi/" />
       <main id="main">
-        <TitleBlock crumbs={<Crumbs items={[['/location/', 'Location'], ['/things-to-do-near-meppadi/', 'Things to do']]} />}
+        <TitleBlock crumbs={<Crumbs items={[['/things-to-do-near-meppadi/', 'Things to do']]} />}
           title={<>Things to do <em>near Meppadi</em></>}
           intro={<p>Seven places within 25 km of the villa, from easy waterfall walks to a full-day peak trek. Distances are by road from Maison Claire.</p>} />
         <section className="wrap" style={{ paddingBottom: 'clamp(48px,6vw,96px)' }}>
@@ -35,10 +35,11 @@ export default function Page() {
             {places.map((p, i) => (
               <li key={p.name} style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr)', gap: 6, padding: '24px 0' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16, alignItems: 'baseline' }}>
-                  <h2 className="d4" style={{ fontSize: 'clamp(26px,2.6vw,34px)' }}><span className="cap cap--muted" style={{ marginRight: 14 }}>{String(i + 1).padStart(2, '0')}</span>{p.href ? <a href={p.href}>{p.name}</a> : p.name}</h2>
+                  <h2 className="d4" style={{ fontSize: 'clamp(26px,2.6vw,34px)' }}><span className="cap cap--muted" style={{ marginRight: 14 }}>{String(i + 1).padStart(2, '0')}</span>{p.name}</h2>
                   <span className="cap cap--pool" style={{ whiteSpace: 'nowrap' }}>{p.km} km</span>
                 </div>
-                <p className="body" style={{ maxWidth: 760 }}>{p.text}{p.href && <> <a href={p.href}>Read the guide</a>.</>}</p>
+                <p className="body" style={{ maxWidth: 760 }}>{p.text}</p>
+                {p.href && <p><a className="textlink" href={p.href}>Read the guide →</a></p>}
               </li>
             ))}
           </ol>

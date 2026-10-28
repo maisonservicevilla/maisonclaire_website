@@ -44,11 +44,11 @@ export default function Page() {
       <Header current="/faq/" />
       <main id="main">
         <TitleBlock crumbs={<Crumbs items={[['/faq/', 'FAQ']]} />} title={<>Wayanad villa FAQ: <em>questions, answered plainly</em></>}
-          intro={<p>The things people ask before booking Maison Claire. Can't find yours? Ask through the booking window.</p>} />
+          intro={<p>The things people ask before booking Maison Claire. Can't find yours? {site.phone ? <>Call <a href={`tel:${site.phone}`}>{site.phoneDisplay}</a> or see <a href="/contact/">contact</a>.</> : <a href="/contact/">Contact us</a>}</p>} />
         <section className="wrap" style={{ paddingBottom: 'var(--space)' }}>
           {groups.map((g) => (
             <div key={g.title} className="g12" style={{ marginBottom: 56 }}>
-              <h2 className="c-1-4 cap cap--pool" style={{ paddingTop: 22 }}>{g.title}</h2>
+              <h2 className="c-1-4 cap cap--pool stick" style={{ paddingTop: 22 }}>{g.title}</h2>
               <div className="c-6-7"><Faq items={g.items} schema={false} /></div>
             </div>
           ))}

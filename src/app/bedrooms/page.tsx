@@ -4,16 +4,21 @@ import { Header } from '@/components/Chrome';
 import { Img } from '@/components/Img';
 import { Crumbs, NextChapter } from '@/components/Bits';
 import { BookingBand, TitleBlock } from '@/components/Sections';
-import { InShort } from '@/components/Sections';
 
 export const metadata = meta('/bedrooms/', `Villa with ${site.ac ? 'Air-Conditioned' : 'King'} Bedrooms in Wayanad | Maison Claire`,
   `Four king bedrooms${site.ac ? ' with AC' : ''}, each with its own bathroom and balcony, three with hill views. A 4 bedroom villa in Meppadi, Wayanad that sleeps 8.`, { image: 'bedroom-mountain-view' });
 
-const rooms = [
-  { n: 'No. 1', img: 'bedroom-mountain-view', alt: 'Bedroom 1 with a king bed and doors to a hill-view balcony', where: 'Ground floor', text: 'King bed, own bathroom and a balcony with a hill view. An extra mattress is available.' },
-  { n: 'No. 2', img: 'bedroom-balcony', alt: 'Bedroom 2 with a carved headboard and balcony doors', where: 'Hill view', text: 'King bed, own bathroom and a balcony with a hill view.' },
-  { n: 'No. 3', img: 'bedroom-grey', alt: 'Bedroom 3 with a grey headboard and a framed painting', where: 'Hill view', text: 'King bed, own bathroom and a balcony with a hill view.' },
-  { n: 'No. 4', img: 'bedroom-garden', alt: 'Bedroom 4, bright, with balcony doors onto palm trees', where: 'Garden side', text: 'King bed, own bathroom and a balcony. An extra mattress is available.' },
+const looks = [
+  { img: 'bedroom-mountain-view', alt: 'Bedroom with a king bed and glass doors to a balcony facing the mountains', h: 'The hill view', t: 'Glass doors open onto a balcony that faces the mountains.' },
+  { img: 'bedroom-balcony', alt: 'Bedroom with a carved wooden king bed and doors to a balcony', h: 'The carved bed', t: 'A carved wooden king bed and a balcony over the trees.' },
+  { img: 'bedroom-grey', alt: 'Bedroom with a grey upholstered king bed and a framed sunset painting', h: 'The grey room', t: 'A grey upholstered king bed, wardrobe and dressing area.' },
+  { img: 'bedroom-view-warm', alt: 'Evening light in a bedroom with balcony doors looking out to the hills', h: 'Evenings', t: 'Warm light inside, the hills outside the balcony doors.' },
+];
+const plan: [string, string, string][] = [
+  ['Bedroom 1', 'Ground floor', 'King bed · own bathroom · hill-view balcony'],
+  ['Bedroom 2', 'Upstairs', 'King bed · own bathroom · hill-view balcony'],
+  ['Bedroom 3', 'Upstairs', 'King bed · own bathroom · hill-view balcony'],
+  ['Bedroom 4', 'Upstairs', 'King bed · own bathroom · balcony'],
 ];
 
 export default function Page() {
@@ -27,21 +32,16 @@ export default function Page() {
           intro={<p>Every bedroom at Maison Claire has a king bed, its own bathroom and a balcony{site.ac ? ', and they are air-conditioned' : ''}. Three of them look out at the hills. Nobody in your group draws the short straw.</p>}
         />
         <section className="wrap" style={{ paddingBottom: 'var(--space)' }}>
-          <div className="cards cards--4 cards--stagger">
-            {rooms.map((r, i) => (
-              <article key={r.n} className="card">
-                <p className="serif" style={{ fontSize: 'clamp(44px,5vw,64px)', lineHeight: 1, color: 'var(--pool)', marginBottom: 12 }}>{r.n}</p>
-                <div className="ph ratio-34"><Img name={r.img} alt={r.alt} priority={i === 0} sizes="(min-width: 1000px) 24vw, (min-width: 640px) 45vw, 100vw" /></div>
-                <h2 className="cap" style={{ marginTop: 16 }}>{r.where}</h2>
-                <p>{r.text}</p>
-              </article>
+          <div className="cards cards--4 cards--stagger cards--2m">
+            {looks.map((r, i) => (
+              <figure key={r.img} className="card">
+                <div className="ph ratio-34"><Img name={r.img} alt={r.alt} priority={i < 2} sizes="(min-width: 1000px) 24vw, 50vw" /></div>
+                <figcaption><h2 className="d4" style={{ marginTop: 4 }}>{r.h}</h2><p>{r.t}</p></figcaption>
+              </figure>
             ))}
           </div>
         </section>
 
-        <InShort>
-          <p>{site.ac ? 'Maison Claire is a villa with four air-conditioned bedrooms in Meppadi. If you are searching for an AC villa in Wayanad or a villa with air-conditioned bedrooms in Wayanad, all four rooms here have AC, a king bed and an attached bathroom.' : 'Maison Claire has four king bedrooms, each with an attached bathroom and a balcony.'}</p>
-        </InShort>
 
         <section className="section band-mist">
           <div className="wrap g12" style={{ alignItems: 'center' }}>
@@ -56,18 +56,14 @@ export default function Page() {
 
         <section className="section wrap">
           <div className="g12">
-            <div className="c-1-4"><h2 className="d2">Sleeping arrangements</h2></div>
-            <div className="c-6-7 prose" style={{ maxWidth: 'none' }}>
-              <table>
-                <thead><tr><th scope="col">Room</th><th scope="col">Bed</th><th scope="col">Bathroom</th><th scope="col">Balcony</th></tr></thead>
-                <tbody>
-                  <tr><td>Bedroom 1 (ground floor)</td><td>King</td><td>Attached</td><td>Hill view</td></tr>
-                  <tr><td>Bedroom 2</td><td>King</td><td>Attached</td><td>Hill view</td></tr>
-                  <tr><td>Bedroom 3</td><td>King</td><td>Attached</td><td>Hill view</td></tr>
-                  <tr><td>Bedroom 4</td><td>King</td><td>Attached</td><td>Yes</td></tr>
-                </tbody>
-              </table>
-              <p>{site.sleeps} guests sleep in the four king beds. Each room also takes one extra guest, so the villa sleeps up to {site.maxGuests}.</p>
+            <div className="c-1-4 stick"><p className="cap cap--pool" style={{ marginBottom: 16 }}>Who sleeps where</p><h2 className="d2">Sleeping arrangements</h2></div>
+            <div className="c-6-7">
+              <ol className="plan">
+                {plan.map(([n, w, d]) => (
+                  <li key={n}><span className="plan__n">{n}</span><span className="cap cap--muted">{w}</span><span className="plan__d">{d}</span></li>
+                ))}
+              </ol>
+              <p className="lead" style={{ marginTop: 24 }}>{site.sleeps} guests sleep in the four king beds{site.ac ? ', and every room is air-conditioned' : ''}. Each room also takes one extra guest, so the villa sleeps up to {site.maxGuests}. If you want a villa with air-conditioned bedrooms in Wayanad, this is an AC villa in Wayanad: a villa with four air-conditioned bedrooms, all the same size.</p>
             </div>
           </div>
         </section>

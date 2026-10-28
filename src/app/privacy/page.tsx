@@ -21,7 +21,7 @@ export default function Page() {
             <h2>Analytics</h2>
             <p>If we add website analytics in future, we will list the provider here and use it only to understand which pages are useful, not to sell or share your data.</p>
             <h2>Your choices</h2>
-            <p>You can ask us what information we hold about your booking and ask us to correct or delete it, unless the law requires us to keep it (for example, guest ID records). Contact us through the booking window{site.email ? ` or at ${site.email}` : ''}.</p>
+            <p>You can ask us what information we hold about your booking and ask us to correct or delete it, unless the law requires us to keep it (for example, guest ID records). Contact us through the booking window{site.email ? <> or at <a href={`mailto:${site.email}`}>{site.email}</a></> : null}.</p>
           </div>
         </section>
       </main>

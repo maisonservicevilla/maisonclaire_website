@@ -31,7 +31,7 @@ export default function Page() {
           </dl>
         </section>
 
-        <section className="section wrap">
+        <section className="section--tight wrap">
           <div className="g12">
             <div className="c-1-5 stack">
               <p className="cap cap--pool">The idea</p>
@@ -44,18 +44,18 @@ export default function Page() {
           </div>
         </section>
 
-        <InShort band>
-          <p>A 4 bedroom villa for rent in Meppadi, Wayanad, with a private pool. It is a spacious villa for large families and a four bedroom villa for family and friends: every room has a king bed and its own bathroom, and it is a villa with a dining room that seats eight. It is a holiday home with a kitchen and pool of its own, rented whole.</p>
-        </InShort>
-
         <section className="section--tight wrap">
-          <div className="cards cards--4 cards--stagger">
-            <a className="card" href="/bedrooms/"><div className="ph ratio-34"><Img name="bedroom-mountain-view" alt="Bedroom with a king bed and a hill-view balcony" sizes="(min-width: 1000px) 24vw, (min-width: 640px) 45vw, 100vw" /></div><h3 className="d4">Bedrooms</h3><p>Four equal king rooms, each with a bathroom and a balcony.</p></a>
-            <a className="card" href="/private-pool/"><div className="ph ratio-34"><Img name="pool-dusk-portrait" alt="The pool at dusk" sizes="(min-width: 1000px) 24vw, (min-width: 640px) 45vw, 100vw" /></div><h3 className="d4">The pool</h3><p>Private, with an infinity edge facing the hills.</p></a>
-            <a className="card" href="/kitchen-dining/"><div className="ph ratio-34"><Img name="kitchen-evening" alt="The kitchen in the evening" sizes="(min-width: 1000px) 24vw, (min-width: 640px) 45vw, 100vw" /></div><h3 className="d4">Kitchen &amp; dining</h3><p>Cook your own meals and eat at a table for eight.</p></a>
-            <a className="card" href="/living-spaces/"><div className="ph ratio-34"><Img name="living-warm" alt="Warm-lit lounge with beige sofas" sizes="(min-width: 1000px) 24vw, (min-width: 640px) 45vw, 100vw" /></div><h3 className="d4">Living spaces</h3><p>Three lounges and balconies for when the group splits up.</p></a>
+          <div className="cards cards--4 cards--stagger cards--2m">
+            <a className="card" href="/bedrooms/"><div className="ph ratio-34"><Img name="bedroom-mountain-view" alt="Bedroom with a king bed and a hill-view balcony" sizes="(min-width: 1000px) 24vw, (min-width: 640px) 45vw, 100vw" /></div><h3 className="d4">Bedrooms →</h3><p>Four equal king rooms, each with a bathroom and a balcony.</p></a>
+            <a className="card" href="/private-pool/"><div className="ph ratio-34"><Img name="exterior-pool" alt="The private pool beside the villa" sizes="(min-width: 1000px) 24vw, (min-width: 640px) 45vw, 100vw" /></div><h3 className="d4">The pool →</h3><p>Private, with an infinity edge facing the hills.</p></a>
+            <a className="card" href="/kitchen-dining/"><div className="ph ratio-34"><Img name="kitchen-evening" alt="The kitchen in the evening" sizes="(min-width: 1000px) 24vw, (min-width: 640px) 45vw, 100vw" /></div><h3 className="d4">Kitchen &amp; dining →</h3><p>Cook your own meals and eat at a table for eight.</p></a>
+            <a className="card" href="/living-spaces/"><div className="ph ratio-34"><Img name="living-grey" alt="Lounge with grey sofas" sizes="(min-width: 1000px) 24vw, (min-width: 640px) 45vw, 100vw" /></div><h3 className="d4">Living spaces →</h3><p>Three lounges and balconies for when the group splits up.</p></a>
           </div>
         </section>
+
+        <InShort>
+          <p>A 4 bedroom villa for rent in Meppadi, Wayanad: a spacious villa for large families and a four bedroom villa for family and friends, with a kitchen and a dining room that seats eight. In short, a private holiday home with pool, rented whole.</p>
+        </InShort>
 
         <section className="section band-mist">
           <div className="wrap g12">

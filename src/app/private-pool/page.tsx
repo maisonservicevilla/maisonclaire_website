@@ -37,7 +37,7 @@ export default function Page() {
         </section>
 
         <InShort band>
-          <p>Maison Claire is a private pool villa in Wayanad. The pool is used only by the group staying in the villa, which makes it a private pool villa for families with children, a private holiday home with pool for your family, and a villa with a swimming pool for groups of friends. Travelling with relatives? It is a private pool villa for family trips of up to twelve. If you want a peaceful villa for a group stay with a private pool, rather than a shared resort pool, this is it.</p>
+          <p>A private pool villa in Wayanad: only the group staying here uses the pool. That makes it a private pool villa for families with children who want to swim without strangers, and a villa with a swimming pool for groups of friends who want the water to themselves after dark. Travelling with grandparents too? It works as a private pool villa for family trips of up to {site.maxGuests}.</p>
         </InShort>
 
         <section className="band-dark section--tight" aria-label="Pool details">
@@ -55,7 +55,7 @@ export default function Page() {
         <section className="section wrap">
           <div className="g12" style={{ alignItems: 'end' }}>
             <div className="c-1-5"><div className="ph ratio-34"><Img name="exterior-path" alt="Stone path across the lawn to the pool, with chairs" sizes="(min-width: 900px) 40vw, 100vw" /></div></div>
-            <div className="c-7-6 stack">
+            <div className="c-7-6 stack m-first">
               <p className="cap cap--pool">03 — Garden &amp; terrace</p>
               <h2 className="d2">A lawn, a stone path, <em>and seats facing the hills</em></h2>
               <p className="lead">Walk out across the lawn to the pool deck, where chairs look out over the valley.</p>
@@ -66,7 +66,7 @@ export default function Page() {
 
         <section className="section--tight wrap">
           <div className="g12">
-            <div className="c-1-4"><h2 className="d2">Pool questions</h2></div>
+            <div className="c-1-4 stick"><p className="cap cap--pool" style={{ marginBottom: 16 }}>04 — Questions</p><h2 className="d2">Pool questions</h2></div>
             <div className="c-6-7"><Faq items={faqs} /></div>
           </div>
         </section>

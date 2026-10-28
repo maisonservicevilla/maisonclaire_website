@@ -19,9 +19,9 @@ export default function Page() {
         />
         <section className="wrap" style={{ paddingBottom: 'var(--space)' }}>
           <div className="cards cards--3">
-            <figure><div className="ph ratio-34"><Img name="living-teal" alt="Lounge with a teal sectional sofa and windows onto the hills" priority sizes="(min-width: 1000px) 31vw, (min-width: 640px) 45vw, 100vw" /></div><figcaption className="cap cap--muted">The bright lounge</figcaption></figure>
-            <figure><div className="ph ratio-34"><Img name="living-tv" alt="TV lounge with grey sofas and a round coffee table" sizes="(min-width: 1000px) 31vw, (min-width: 640px) 45vw, 100vw" /></div><figcaption className="cap cap--muted">The TV lounge</figcaption></figure>
-            <figure><div className="ph ratio-34"><Img name="living-chesterfield" alt="Sitting room with two beige sofas and a round rug" sizes="(min-width: 1000px) 31vw, (min-width: 640px) 45vw, 100vw" /></div><figcaption className="cap cap--muted">The sitting room</figcaption></figure>
+            <figure><div className="ph ratio-34 r43m"><Img name="living-teal" alt="Lounge with a teal sectional sofa and windows onto the hills" priority sizes="(min-width: 1000px) 31vw, (min-width: 640px) 45vw, 100vw" /></div><figcaption><span className="cap cap--muted">The bright lounge</span><p>A teal sofa and tall windows onto the hills.</p></figcaption></figure>
+            <figure><div className="ph ratio-34 r43m"><Img name="living-tv" alt="TV lounge with grey sofas and a round coffee table" sizes="(min-width: 1000px) 31vw, (min-width: 640px) 45vw, 100vw" /></div><figcaption><span className="cap cap--muted">The TV lounge</span><p>Grey sofas around a round coffee table, and the TV.</p></figcaption></figure>
+            <figure><div className="ph ratio-34 r43m"><Img name="living-chesterfield" alt="Sitting room with two beige sofas and a round rug" sizes="(min-width: 1000px) 31vw, (min-width: 640px) 45vw, 100vw" /></div><figcaption><span className="cap cap--muted">The sitting room</span><p>Two beige sofas on a round rug, for quieter evenings.</p></figcaption></figure>
           </div>
         </section>
         <section className="section band-mist">

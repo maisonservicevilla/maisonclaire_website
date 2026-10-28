@@ -38,10 +38,10 @@ export function DayTimeline() {
 }
 
 export const rooms = [
-  { name: 'Bedroom 1', img: 'bedroom-mountain-view', alt: 'Bedroom 1 with a king bed and glass doors to a hill-view balcony', desc: 'Ground floor. King bed, its own bathroom and a balcony facing the hills.' },
-  { name: 'Bedroom 2', img: 'bedroom-balcony', alt: 'Bedroom with a carved headboard and doors to a balcony', desc: 'King bed, its own bathroom and a balcony facing the hills.' },
-  { name: 'Bedroom 3', img: 'bedroom-grey', alt: 'Bedroom with a grey headboard and a framed painting', desc: 'King bed, its own bathroom and a balcony facing the hills.' },
-  { name: 'Bedroom 4', img: 'bedroom-garden', alt: 'Bright bedroom with balcony doors looking onto palm trees', desc: 'King bed, its own bathroom and a balcony.' },
+  { name: 'Hill-view bedroom', img: 'bedroom-mountain-view', alt: 'Bedroom with a king bed and glass doors to a balcony facing the mountains', desc: 'Four king bedrooms, each with its own bathroom and a balcony. Three face the hills.' },
+  { name: 'Carved-bed room', img: 'bedroom-balcony', alt: 'Bedroom with a carved wooden king bed and doors to a balcony', desc: 'A carved wooden king bed and a balcony over the trees.' },
+  { name: 'Grey room', img: 'bedroom-grey', alt: 'Bedroom with a grey upholstered king bed and a framed painting', desc: 'A grey upholstered king bed and a dressing area.' },
+  { name: 'Balconies', img: 'bedroom-garden', alt: 'Bedroom doors open to a balcony looking onto palm trees and hills', desc: 'Every bedroom opens onto a balcony.' },
   { name: 'Lounges', img: 'living-teal', alt: 'Lounge with a teal sofa and windows onto the hills', desc: 'Three separate lounges, one with a TV, so the group can spread out.' },
   { name: 'Kitchen', img: 'kitchen', alt: 'Kitchen with a fridge, hob, chimney and microwave', desc: 'A full kitchen with fridge, hob and chimney, microwave and washing machine.' },
   { name: 'Dining', img: 'dining-staircase', alt: 'Dining table for eight beside the glass staircase', desc: 'A table for eight beside the glass staircase.' },
@@ -89,7 +89,7 @@ export function PhotoHero({ img, alt, title, kicker, facts, children }: { img: s
       <div className="wrap hero__body">
         {kicker}
         <h1 className="d1" style={{ marginTop: 18 }}>{title}</h1>
-        {children}
+        {children ?? <div className="hero__ctas"><BookButton className="btn btn--light">Check dates</BookButton></div>}
         {facts && <div className="horizon">{facts.map((f) => <span key={f} className="cap">{f}</span>)}</div>}
       </div>
     </section>

@@ -3,10 +3,11 @@ import { meta } from '@/lib/meta';
 import { Header } from '@/components/Chrome';
 import { BookButton } from '@/components/Book';
 import { Crumbs } from '@/components/Bits';
+import { Img } from '@/components/Img';
 import { BookingBand, TitleBlock } from '@/components/Sections';
 
 export const metadata = meta('/contact/', 'Contact Maison Claire Villa | Villa Booking Enquiry, Wayanad',
-  'Get in touch with Maison Claire Service Villa in Meppadi, Wayanad: check dates and ask questions through the booking window, or find us on Instagram.');
+  'Get in touch with Maison Claire Service Villa in Meppadi, Wayanad: call, email or check live dates in the booking window. Address and Google Maps directions.');
 
 export default function Page() {
   return (
@@ -14,17 +15,28 @@ export default function Page() {
       <Header />
       <main id="main">
         <TitleBlock crumbs={<Crumbs items={[['/contact/', 'Contact']]} />} title={<>Contact Maison Claire <em>about your stay</em></>}
-          intro={<p>The quickest way to reach us is the booking window: pick your dates and send your question with them.</p>} />
+          intro={<p>Call or email us with any question, or check live dates in the booking window. We are in Kappamkolly, Meppadi.</p>} />
         <section className="wrap" style={{ paddingBottom: 'var(--space)' }}>
-          <dl className="ledger" style={{ maxWidth: 900 }}>
-            <div><dt className="cap cap--muted">Dates and booking</dt><dd style={{ margin: 0 }}><BookButton className="btn btn--dark">Open the booking window</BookButton></dd></div>
-            {site.whatsapp && <div><dt className="cap cap--muted">WhatsApp</dt><dd style={{ margin: 0 }}><a href={`https://wa.me/${site.whatsapp.replace(/\D/g, '')}`}>Message us</a></dd></div>}
-            {site.phone && <div><dt className="cap cap--muted">Phone</dt><dd style={{ margin: 0 }}><a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></dd></div>}
-            {site.email && <div><dt className="cap cap--muted">Email</dt><dd style={{ margin: 0 }}><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>}
-            <div><dt className="cap cap--muted">Instagram</dt><dd style={{ margin: 0 }}><a href={site.instagram} target="_blank" rel="noopener">@maison.claire_</a></dd></div>
-            <div><dt className="cap cap--muted">Where</dt><dd style={{ margin: 0, textAlign: 'right' }}>{site.fullAddress ? site.fullAddress + ', ' : ''}{site.locality}, {site.district}, {site.state} {site.postalCode}{site.mapUrl && <><br /><a href={site.mapUrl} target="_blank" rel="noopener">Google Maps</a></>}</dd></div>
-          </dl>
-          <p className="small" style={{ marginTop: 24 }}>Booked through Airbnb, Booking.com or another site? Message us through that site so your booking details stay in one place.</p>
+          <div className="g12" style={{ alignItems: 'start' }}>
+            <div className="c-1-7">
+              <div className="ledger clist">
+                {site.phone && <div><a className="crow" href={`tel:${site.phone}`}><span className="cap cap--muted">Call</span><span className="crow__v">{site.phoneDisplay}</span></a></div>}
+                {site.whatsapp && <div><a className="crow" href={`https://wa.me/${site.whatsapp.replace(/\D/g, '')}`}><span className="cap cap--muted">WhatsApp</span><span className="crow__v">Message us</span></a></div>}
+                {site.email && <div><a className="crow" href={`mailto:${site.email}`}><span className="cap cap--muted">Email</span><span className="crow__v">{site.email}</span></a></div>}
+                <div><a className="crow" href={site.instagram} target="_blank" rel="noopener"><span className="cap cap--muted">Instagram</span><span className="crow__v">@maison.claire_<span className="sr-only"> (opens in a new tab)</span></span></a></div>
+                <div><div className="crow"><span className="cap cap--muted">Dates and booking</span><BookButton className="btn btn--dark">Check dates</BookButton></div></div>
+              </div>
+              <p className="small" style={{ marginTop: 24 }}>Booked through Airbnb, Booking.com or another site? Message us through that site so your booking details stay in one place.</p>
+            </div>
+            <div className="c-9-4 stack">
+              <div className="ph ratio-43"><Img name="exterior-day" alt="Maison Claire villa and its lawn in daylight" sizes="(min-width: 900px) 30vw, 100vw" /></div>
+              <div className="note stack-s">
+                <p className="cap cap--pool">Address</p>
+                <p className="d4">{site.fullAddress ? <>{site.fullAddress}, </> : null}{site.locality}, {site.district}, {site.state} {site.postalCode}</p>
+                {site.mapUrl && <a className="btn btn--line" href={site.mapUrl} target="_blank" rel="noopener" style={{ width: '100%' }}>Directions on Google Maps</a>}
+              </div>
+            </div>
+          </div>
         </section>
         <BookingBand />
       </main>

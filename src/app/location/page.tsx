@@ -17,13 +17,14 @@ export default function Page() {
           intro={<p>Maison Claire is in the green hills around Meppadi in south Wayanad, Kerala. Waterfalls, viewpoints and the Chembra peak are a short drive away.</p>} />
 
         <section className="wrap" style={{ paddingBottom: 'var(--space)' }}>
-          <div className="g12" style={{ alignItems: 'stretch' }}>
-            <div className="c-1-7"><div className="ph ratio-43"><Img name="terrace-view" alt="View from the villa terrace over the trees to the hills" priority sizes="(min-width: 900px) 56vw, 100vw" /></div></div>
+          <div className="g12" style={{ alignItems: 'start' }}>
+            <div className="c-1-7"><div className="ph ratio-43 cap-h"><Img name="terrace-view" alt="View from the villa terrace over the trees to the hills" priority sizes="(min-width: 900px) 56vw, 100vw" /></div></div>
             <div className="c-9-4 note" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               <p className="cap cap--pool">Address</p>
               <p className="d4">{site.name}<br />{site.fullAddress ? <>{site.fullAddress}<br /></> : null}{site.locality}, {site.district}, {site.state}{site.postalCode ? ` ${site.postalCode}` : ''}</p>
               {site.plusCode && <p className="small">Google Maps plus code: {site.plusCode} Meppadi</p>}
               {site.mapUrl && <a className="btn btn--dark" href={site.mapUrl} target="_blank" rel="noopener">Get directions on Google Maps</a>}
+              {site.phone && <p className="small">Lost on the way? Call <a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></p>}
             </div>
           </div>
         </section>
@@ -43,7 +44,7 @@ export default function Page() {
         </section>
 
         <section className="section wrap">
-          <div className="chapter"><p className="cap cap--pool">02 — Around you</p><h2 className="d2">Everything here is <em>within 25 km</em></h2></div>
+          <div className="chapter"><p className="cap cap--pool">02 — Around you</p><h2 className="d2">Everything here is <em>within 25 km</em></h2></div>
           <Ribbon />
           <p className="cap cap--muted" style={{ marginTop: 20 }}>Road distances from the villa, approximate</p>
         </section>
@@ -52,7 +53,7 @@ export default function Page() {
           <div className="g12">
             <div className="c-1-7">
               <p className="cap cap--pool" style={{ marginBottom: 24 }}>03 — Close by</p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: 16 }}>
+              <div className="close3">
                 {site.everyday.map((e) => (
                   <div key={e.name} style={{ borderTop: '1px solid var(--bark)', paddingTop: 14 }}>
                     <p className="serif" style={{ fontSize: 'clamp(36px,5vw,72px)', lineHeight: 1 }}>{e.dist.split(' ')[0]}<span style={{ fontSize: '0.4em' }}> {e.dist.split(' ')[1]}</span></p>
