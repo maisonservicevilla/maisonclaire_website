@@ -21,7 +21,7 @@ published. Fill these in and redeploy:
 |---|---|---|
 | `checkIn` / `checkIn24` | Shown on FAQ, house rules, schema | Airbnb says 3 PM, MakeMyTrip says 2 PM. Hidden. |
 | `sleeps` / `maxGuests` | Everywhere guests are mentioned | Confirmed: 8 standard, 12 maximum (2 + 1 extra per room). |
-| `pets` | FAQ, house rules | Airbnb says no, Expedia says yes. Hidden. |
+| `pets` | FAQ, house rules, schema | Confirmed: not allowed. |
 | `events` | House rules | Unknown. Hidden. |
 | `wifi`, `parking`, `powerBackup` | Amenity lists, schema, parking keywords | Unknown. Hidden. |
 | `poolSize`, `poolHours` | Pool page | Unknown. Hidden. |

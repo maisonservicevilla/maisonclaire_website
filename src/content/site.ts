@@ -38,7 +38,8 @@ export const site = {
   checkIn: null as string | null, // Airbnb says 3 PM, MakeMyTrip says 2 PM
   checkIn24: null as string | null,
   extraGuests: 'With one extra guest in each room, it takes up to 12' as string | null,
-  pets: null as string | null, // Airbnb says no pets, Expedia says one pet allowed
+  pets: 'Pets are not allowed at the villa.' as string | null, // confirmed by owner
+  petsAllowed: false,
   events: null as string | null,
   wifi: null as boolean | null,
   parking: null as string | null, // e.g. 'Parking for 3 cars inside the gate'

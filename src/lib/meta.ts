@@ -36,6 +36,7 @@ export function lodgingSchema() {
     ...(s.checkIn24 ? { checkinTime: s.checkIn24 } : {}),
     checkoutTime: s.checkOut24,
     numberOfRooms: s.bedrooms,
+    ...(s.pets ? { petsAllowed: s.petsAllowed } : {}),
     containsPlace: { '@type': 'Accommodation', additionalType: 'EntirePlace', numberOfBedrooms: s.bedrooms, numberOfBathroomsTotal: s.bathrooms, occupancy: { '@type': 'QuantitativeValue', maxValue: s.maxGuests }, bed: { '@type': 'BedDetails', numberOfBeds: s.bedrooms, typeOfBed: 'King' } },
     amenityFeature: amenities.map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })),
     identifier: { '@type': 'PropertyValue', name: 'Property registration number', value: s.registrationNo },

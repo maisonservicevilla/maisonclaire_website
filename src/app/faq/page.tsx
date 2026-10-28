@@ -24,7 +24,7 @@ const groups: { title: string; items: QA[] }[] = [
     T('How do I book?', 'Use the booking window on this website. It shows live dates and the price for the whole villa before you confirm.', <p>Use the <a href="/rates-booking/">booking window</a> on this website. It shows live dates and the price for the whole villa before you confirm.</p>),
     T('What time is check-in and check-out?', `Check-out is by ${site.checkOut}.${site.checkIn ? ` Check-in is from ${site.checkIn}.` : ' Your check-in time is shown when you book.'} Check-in is self check-in with a door keypad.`),
     T('What ID do we need?', 'Every guest needs a photo ID: passport, Aadhaar, driving licence or another government ID. The main guest must be 18 or older.'),
-    T('Can we bring a pet?', site.pets || 'Please ask us before booking if you would like to bring a pet.'),
+    T('Can we bring a pet?', (site.pets && 'No. ' + site.pets) ||'Please ask us before booking if you would like to bring a pet.'),
     T('Is Maison Claire a registered property?', `Yes. Its Kerala registration number is ${site.registrationNo}.`),
   ] },
   { title: 'Getting here and around', items: [
