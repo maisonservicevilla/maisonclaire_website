@@ -11,7 +11,7 @@ export const UPDATED_TEXT = '27 October 2026';
 /** Shared layout for travel guides: photo, readable column of text, sources, booking. */
 export function Guide(p: {
   path: string; crumbs: [string, string][]; title: React.ReactNode; headline: string; description: string; intro: React.ReactNode;
-  img: string; imgAlt: string; imgCaption?: string; children: React.ReactNode; sources?: [string, string][]; aside?: React.ReactNode;
+  img: string; imgAlt: string; imgCaption?: React.ReactNode; children: React.ReactNode; sources?: [string, string][]; aside?: React.ReactNode;
   next: { href: string; title: string; img: string }; about?: object;
 }) {
   return (

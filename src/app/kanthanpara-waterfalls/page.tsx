@@ -9,7 +9,7 @@ export default function Page() {
     <Guide path="/kanthanpara-waterfalls/" crumbs={[['/things-to-do-near-meppadi/', 'Things to do'], ['/kanthanpara-waterfalls/', 'Kanthanpara Falls']]}
       title={<>Kanthanpara <em>Falls</em></>} headline="Kanthanpara Falls, Wayanad: a visitor guide" description={d}
       intro={<p>A smaller, quieter waterfall in south Wayanad, a short walk from the road. It is 10 km from Maison Claire.</p>}
-      img="pool-infinity-mountain" imgAlt="The villa pool with the mountains beyond" imgCaption="The pool at Maison Claire. Kanthanpara Falls is a 10 km drive away."
+      img="place-kanthanpara" imgAlt="Kanthanpara Falls pouring over wide rock shelves into a pool" imgCaption={<>Kanthanpara Falls, 10 km from the villa. Photo: <a href="https://commons.wikimedia.org/wiki/File:Wayanad_-_Kanthanpara_Waterfalls_-_1.jpg" target="_blank" rel="noopener">Ingo Mehling</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener license">CC BY-SA 4.0</a></>}
       aside={<FactBox rows={[['From the villa', '10 km'], ['Height', 'About 30 m'], ['Walk', 'Short, from the road'], ['Entry', 'Small fee'], ['Reported hours', 'About 9 AM to 4:30 PM']]} />}
       sources={[['Backpackers United: Kanthanpara Waterfalls', 'https://backpackersunited.in/destinations/wayanad/attraction/kanthanpara-waterfalls'], ['Kerala Tourism: Kanthanpara Waterfalls video', 'https://www.keralatourism.org/video-gallery/kanthanpara-waterfalls/1076']]}
       next={{ href: '/location/', title: 'Location', img: 'exterior-day' }}

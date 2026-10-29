@@ -80,6 +80,8 @@ AVIF and WebP sizes in `public/img`, the favicons and the social image (takes ~1
 To add a photo: drop a `.jpg` in `assets/photos`, run `npm run images`, use it with
 `<Img name="file-name" alt="…" />`.
 
+**Attraction photos.** `assets/photos/place-*.jpg` are from Wikimedia Commons (CC BY-SA 4.0). Each one is credited under the photo, with the author and licence, as the licence requires. Details and credits live in `src/content/places.ts`. After changing them run `node scripts/place-images.mjs`.
+
 **Fonts.** Cormorant Garamond and Jost, self-hosted and subsetted to the characters the site uses
 (`assets/fonts`). If you add text with new symbols (other languages, emoji), regenerate the subsets.
 
