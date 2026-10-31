@@ -146,7 +146,7 @@ export default function Home() {
               <p>A private villa for family stay: grandparents, parents and children under one roof, with a kitchen for home-cooked meals.</p>
             </a>
             <a className="card" href="/group-stay-villa-wayanad/">
-              <div className="ph ratio-43"><Img name="terrace-view" alt="Terrace looking over trees to the hills" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 45vw, 100vw" /></div>
+              <div className="ph ratio-43"><Img name="pool-dusk" alt="The private pool at dusk with the mountains beyond" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 45vw, 100vw" /></div>
               <h3 className="d4">Trips with friends <span aria-hidden="true">→</span></h3>
               <p>Four equal king bedrooms, so nobody gets the small room. Long evenings by the pool.</p>
             </a>
