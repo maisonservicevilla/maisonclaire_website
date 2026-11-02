@@ -6,7 +6,7 @@ import { Crumbs, NextChapter } from '@/components/Bits';
 import { BookingBand, TitleBlock } from '@/components/Sections';
 
 export const metadata = meta('/bedrooms/', `Villa with ${site.ac ? 'AC' : 'King'} Bedrooms in Wayanad | Maison Claire`,
-  `Four king bedrooms${site.ac ? ' with AC' : ''}, each with its own bathroom, two facing Chembra Peak. A 4 bedroom villa in Meppadi, Wayanad for up to 12.`, { image: 'bedroom-mountain-view' });
+  `A villa with four ${site.ac ? 'air-conditioned' : 'king'} bedrooms in Meppadi, Wayanad: king beds, own bathrooms, two facing Chembra Peak. Up to 12 guests.`, { image: 'bedroom-mountain-view' });
 
 const looks = [
   { img: 'bedroom-mountain-view', alt: 'Bedroom with a king bed and glass doors to a balcony facing the mountains', h: 'The peak view', t: 'Two of the bedrooms look straight out at Chembra Peak.' },
@@ -62,7 +62,7 @@ export default function Page() {
                   <li key={n}><span className="plan__n">{n}</span><span className="cap cap--muted">{w}</span><span className="plan__d">{d}</span></li>
                 ))}
               </ol>
-              <p className="lead" style={{ marginTop: 24 }}>{site.sleeps} guests sleep in the four king beds{site.ac ? ', and every room is air-conditioned' : ''}. Each room also takes one extra guest, so the villa sleeps up to {site.maxGuests}. If you are looking for an AC villa in Wayanad, all four bedrooms here are air-conditioned.</p>
+              <p className="lead" style={{ marginTop: 24 }}>{site.sleeps} guests sleep in the four king beds{site.ac ? ', and every room is air-conditioned' : ''}. Each room also takes one extra guest, so the villa sleeps up to {site.maxGuests}. If you need a villa with air-conditioned bedrooms in Wayanad, this is one: an AC villa in Wayanad where all four bedrooms have air conditioning.</p>
             </div>
           </div>
         </section>

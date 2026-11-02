@@ -54,7 +54,7 @@ export default function Page() {
         </section>
 
         <InShort>
-          <p>A 4 bedroom villa for rent in Meppadi, Wayanad, with a private pool, a full kitchen and a dining table for eight. Large families, or family and friends travelling together, have the whole house.</p>
+          <p>A 4 bedroom villa for rent in Meppadi, Wayanad, with a private pool, a full kitchen and a dining table for eight. It is a spacious villa for large families, and a four bedroom villa for family and friends who want a private holiday home with pool rather than hotel rooms.</p>
         </InShort>
 
         <section className="section band-mist">

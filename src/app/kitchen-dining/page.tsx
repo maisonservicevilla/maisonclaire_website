@@ -40,7 +40,7 @@ export default function Page() {
           </div>
         </section>
         <InShort>
-          <p>Maison Claire is a self-catering villa in Wayanad: cook in a fully equipped kitchen, eat at the table for eight, or walk 200 m to the nearest restaurants. Families with small children keep to their own mealtimes.</p>
+          <p>Maison Claire is a self-catering villa in Wayanad: cook in a fully equipped kitchen, eat at the table for eight, or walk 200 m to the nearest restaurants. As a self-catering villa for families with small children, it lets everyone keep to their own mealtimes.</p>
         </InShort>
 
         <section className="section band-mist">

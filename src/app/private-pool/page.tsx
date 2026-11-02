@@ -10,6 +10,7 @@ export const metadata = meta('/private-pool/', 'Villa with Private Pool in Wayan
   'A private infinity-edge pool facing the Wayanad hills, used only by your group. Lit at night. Book the whole 4-bedroom villa in Meppadi for families and groups.', { image: 'pool-dusk' });
 
 const faqs: QA[] = [
+  { q: 'Is this a private pool villa for family trips with grandparents too?', a: <p>Yes. Two of the four bedrooms are on the ground floor, so older relatives can stay close to the pool and the garden without using the stairs.</p>, text: 'Yes. Two of the four bedrooms are on the ground floor, so older relatives can stay close to the pool and the garden without using the stairs.' },
   { q: 'Is the pool private?', a: <p>Yes. Only your group uses it. The villa is booked whole, so there are no other guests on the property.</p>, text: 'Yes. Only your group uses it. The villa is booked whole, so there are no other guests on the property.' },
   { q: 'Is the pool lit at night?', a: <p>Yes, it has underwater lights, so you can swim or sit by the water after dark.</p>, text: 'Yes, it has underwater lights, so you can swim or sit by the water after dark.' },
   { q: 'Is the pool safe for children?', a: <p>Children should be watched by an adult at all times near the water. {site.poolSize ? `The pool is ${site.poolSize}.` : 'Ask us for the depth before you book if you are travelling with small children.'}</p>, text: 'Children should be watched by an adult at all times near the water. Ask for the pool depth before booking if travelling with small children.' },
@@ -37,7 +38,7 @@ export default function Page() {
         </section>
 
         <InShort band>
-          <p>Only your group uses the pool, and it has underwater lights, so you can swim after dark. For families with children it means a private pool villa with no strangers at the poolside.</p>
+          <p>Only your group uses the pool, and it has underwater lights, so you can swim after dark. That makes it a private pool villa for families with children: no strangers at the poolside.</p>
         </InShort>
 
         <section className="band-dark section--tight" aria-label="Pool details">

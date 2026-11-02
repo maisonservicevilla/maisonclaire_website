@@ -14,10 +14,11 @@ export const metadata = meta(
 );
 
 const faqs: QA[] = [
+  { q: 'Is it a good villa for friends and family in Wayanad?', a: <p>Yes. Four king bedrooms with their own bathrooms, three lounges and a private pool give a mixed group room to be together or apart. It sleeps 8, or up to 12 with an extra guest in each room.</p>, text: 'Yes. Four king bedrooms with their own bathrooms, three lounges and a private pool give a mixed group room to be together or apart. It sleeps 8, or up to 12 with an extra guest in each room.' },
   { q: 'Do we get the whole villa?', a: <p>Yes. You book the entire house, pool and garden included. No other guests stay while you are here.</p>, text: 'Yes. You book the entire house, pool and garden included. No other guests stay while you are here.' },
   { q: 'How many people can stay?', a: <p>The villa sleeps {site.sleeps} in four king bedrooms, each with its own bathroom.{site.extraGuests ? ` ${site.extraGuests}.` : ' If your group is bigger, ask us before you book.'}</p>, text: `The villa sleeps ${site.sleeps} in four king bedrooms, each with its own bathroom. With one extra guest in each room, it takes up to ${site.maxGuests}.` },
   { q: 'Where exactly is Maison Claire?', a: <p>In the hills around {site.locality} in south Wayanad, Kerala. The 900 Kandi glass bridge is 9 km away and Kanthanpara Falls is 10 km. <a href="/location/">See the location and directions</a>.</p>, text: `In the hills around ${site.locality} in south Wayanad, Kerala. The 900 Kandi glass bridge is 9 km away and Kanthanpara Falls is 10 km.` },
-  { q: 'How do we book?', a: <p>Pick your dates in the booking window on this site. It shows live availability and the price for the whole villa. <a href="/rates-booking/">Rates and booking</a>.</p>, text: 'Pick your dates in the booking window on this website. It shows live availability and the price for the whole villa.' },
+  { q: 'How do we book?', a: <p>Pick your dates in the booking window on this site. It shows live availability and the price for the whole villa; send a booking request and we confirm it with you. You can also WhatsApp us on +91 80060 01367. <a href="/rates-booking/">Rates and booking</a>.</p>, text: 'Pick your dates in the booking window on this website. It shows live availability and the price for the whole villa; send a booking request and the villa confirms it. You can also WhatsApp +91 80060 01367.' },
 ];
 
 export default function Home() {
@@ -89,7 +90,7 @@ export default function Home() {
         </section>
 
         <InShort>
-          <p>Maison Claire is an entire villa for rent in Wayanad, let to one group at a time: a private villa in Meppadi with its own pool, kitchen and three lounges. If you want a peaceful villa stay in Wayanad rather than a hotel corridor, check your dates here.</p>
+          <p>Maison Claire is an entire villa for rent in Wayanad, let to one group at a time: a private villa in Meppadi, Wayanad, with its own pool, kitchen and three lounges. It is an exclusive holiday villa in the way that matters: nobody else stays while you are here. If you want a peaceful villa stay in Wayanad rather than a hotel corridor, this holiday villa near Meppadi, Wayanad is booked direct here.</p>
         </InShort>
 
         {/* 02 INSIDE */}
