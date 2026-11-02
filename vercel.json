@@ -6,31 +6,129 @@
   "outputDirectory": "out",
   "trailingSlash": true,
   "redirects": [
-    { "source": "/book", "destination": "/rates-booking/", "permanent": true },
-    { "source": "/booking", "destination": "/rates-booking/", "permanent": true },
-    { "source": "/rates", "destination": "/rates-booking/", "permanent": true },
-    { "source": "/photos", "destination": "/gallery/", "permanent": true },
-    { "source": "/rooms", "destination": "/bedrooms/", "permanent": true },
-    { "source": "/pool", "destination": "/private-pool/", "permanent": true }
+    {
+      "source": "/book/",
+      "destination": "/rates-booking/",
+      "permanent": true
+    },
+    {
+      "source": "/booking/",
+      "destination": "/rates-booking/",
+      "permanent": true
+    },
+    {
+      "source": "/rates/",
+      "destination": "/rates-booking/",
+      "permanent": true
+    },
+    {
+      "source": "/photos/",
+      "destination": "/gallery/",
+      "permanent": true
+    },
+    {
+      "source": "/rooms/",
+      "destination": "/bedrooms/",
+      "permanent": true
+    },
+    {
+      "source": "/pool/",
+      "destination": "/private-pool/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), usb=(), browsing-topics=()" },
-        { "key": "Content-Security-Policy-Report-Only", "value": "default-src 'self'; script-src 'self' 'sha256-X/DqLZ/ycxQgJOaJGLNkv1shIB3SdLX8IlfzdLqkU+4=' https://app.innrow.com; style-src 'self' 'unsafe-inline' https://app.innrow.com; img-src 'self' data: https:; font-src 'self' data: https://app.innrow.com; connect-src 'self' https://app.innrow.com; frame-src https://app.innrow.com https://wa.me; form-action 'self' https://app.innrow.com; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests" }
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), usb=(), browsing-topics=()"
+        },
+        {
+          "key": "Content-Security-Policy-Report-Only",
+          "value": "default-src 'self'; script-src 'self' 'sha256-X/DqLZ/ycxQgJOaJGLNkv1shIB3SdLX8IlfzdLqkU+4=' https://app.innrow.com; style-src 'self' 'unsafe-inline' https://app.innrow.com; img-src 'self' data: https:; font-src 'self' data: https://app.innrow.com; connect-src 'self' https://app.innrow.com; frame-src https://app.innrow.com https://wa.me; form-action 'self' https://app.innrow.com; base-uri 'self'; object-src 'none'; frame-ancestors 'self'"
+        }
       ]
     },
-    { "source": "/_next/static/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/brand/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] },
-    { "source": "/favicon.ico", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] },
-    { "source": "/og.jpg", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
-    { "source": "/manifest.webmanifest", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
-    { "source": "/llms.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] }
+    {
+      "source": "/_next/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/brand/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    },
+    {
+      "source": "/favicon.ico",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    },
+    {
+      "source": "/og.jpg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/manifest.webmanifest",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    }
   ]
 }

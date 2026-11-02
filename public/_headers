@@ -5,7 +5,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: camera=(), microphone=(), geolocation=(), usb=(), browsing-topics=()
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'sha256-X/DqLZ/ycxQgJOaJGLNkv1shIB3SdLX8IlfzdLqkU+4=' https://app.innrow.com; style-src 'self' 'unsafe-inline' https://app.innrow.com; img-src 'self' data: https:; font-src 'self' data: https://app.innrow.com; connect-src 'self' https://app.innrow.com; frame-src https://app.innrow.com https://wa.me; form-action 'self' https://app.innrow.com; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'sha256-X/DqLZ/ycxQgJOaJGLNkv1shIB3SdLX8IlfzdLqkU+4=' https://app.innrow.com; style-src 'self' 'unsafe-inline' https://app.innrow.com; img-src 'self' data: https:; font-src 'self' data: https://app.innrow.com; connect-src 'self' https://app.innrow.com; frame-src https://app.innrow.com https://wa.me; form-action 'self' https://app.innrow.com; base-uri 'self'; object-src 'none'; frame-ancestors 'self'
 
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
