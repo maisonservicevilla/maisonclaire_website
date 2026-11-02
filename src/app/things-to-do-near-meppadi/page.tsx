@@ -9,7 +9,7 @@ import { SITE_URL } from '@/content/site';
 import { places, typeLabel, commons } from '@/content/places';
 
 const d = 'Things to do near Meppadi, Wayanad: 900 Kandi glass bridge, Kanthanpara and Soochipara falls, Chembra Peak, Edakkal Caves and more, with photos and distances.';
-export const metadata = meta('/things-to-do-near-meppadi/', 'Things to Do near Meppadi, Wayanad | Places to Visit & Distances', d, { image: 'place-chembra' });
+export const metadata = meta('/things-to-do-near-meppadi/', 'Things to Do near Meppadi, Wayanad: 7 Places & Distances', d, { image: 'place-chembra' });
 
 const counts = Object.entries(places.reduce<Record<string, number>>((a, p) => ({ ...a, [p.type]: (a[p.type] || 0) + 1 }), {}));
 const byId = Object.fromEntries(places.map((p) => [p.id, p]));
@@ -17,7 +17,7 @@ const byId = Object.fromEntries(places.map((p) => [p.id, p]));
 const plans = [
   { icon: 'child', title: 'With children', time: 'Morning', stops: ['kanthanpara'], note: 'A short walk from the road to the falls, then back to the villa pool by lunch.' },
   { icon: 'jeep', title: 'Half-day pair', time: 'Half a day', stops: ['kandi', 'soochipara'], note: 'The jeep ride into 900 Kandi, then the forest path down to Soochipara Falls.' },
-  { icon: 'boot', title: 'Full day', time: 'Start early', stops: ['chembra'], note: 'The Chembra trek runs with forest guides. Go early, come back tired, swim.' },
+  { icon: 'boot', title: 'Full day', time: 'Start early', stops: ['chembra'], note: 'The Chembra trek runs with forest guides and takes most of the day. Check that it is open before you set out.' },
   { icon: 'sun', title: 'Caves and a reservoir', time: 'Morning to afternoon', stops: ['edakkal', 'karapuzha'], note: 'Climb up to Edakkal Caves in the morning, then a slower afternoon by the Karapuzha reservoir.' },
 ];
 
@@ -32,6 +32,7 @@ export default function Page() {
             <Crumbs items={[['/things-to-do-near-meppadi/', 'Things to do']]} />
             <h1 className="d1" style={{ fontSize: 'clamp(42px, 6.2vw, 92px)' }}>Things to do <em>near Meppadi</em></h1>
             <p className="lead">Seven places within 25 km of the villa, from easy waterfall walks to a full-day peak trek. Distances are by road from Maison Claire.</p>
+            <p className="updated">Updated 27 October 2026</p>
           </div>
           <div className="mosaic" aria-label="Photos of places near Meppadi">
             <figure className="mosaic__a"><Img name="place-chembra" alt="The heart-shaped lake on the Chembra Peak trek" priority sizes="(min-width: 900px) 40vw, 100vw" /></figure>
@@ -134,7 +135,7 @@ export default function Page() {
         <NextChapter href="/900-kandi-glass-bridge/" title="900 Kandi" img="place-kandi" />
       </main>
       <JsonLd data={{ '@context': 'https://schema.org', '@type': 'ItemList', name: 'Things to do near Meppadi, Wayanad', url: SITE_URL + '/things-to-do-near-meppadi/',
-        itemListElement: places.map((p, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'TouristAttraction', name: p.name, description: p.text, image: `${SITE_URL}/img/${p.img}-1200.avif`, address: { '@type': 'PostalAddress', addressRegion: 'Wayanad, Kerala', addressCountry: 'IN' } } })) }} />
+        itemListElement: places.map((p, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'TouristAttraction', name: p.name, description: p.text, image: `${SITE_URL}/img/${p.img}-1200.jpg`, address: { '@type': 'PostalAddress', addressRegion: 'Wayanad, Kerala', addressCountry: 'IN' } } })) }} />
     </>
   );
 }

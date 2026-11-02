@@ -10,7 +10,7 @@ export default function Page() {
       title={<>900 Kandi <em>glass bridge</em></>} headline="900 Kandi glass bridge, Wayanad: how to visit and where to stay" description={d}
       intro={<p>A forest estate above Meppadi with off-road tracks and a glass bridge over the trees. It is 9 km from Maison Claire.</p>}
       img="place-kandi" imgAlt="Forested hills and mountains seen from 900 Kandi" imgCaption={<>The view from 900 Kandi, 9 km from the villa. Photo: <a href="https://commons.wikimedia.org/wiki/File:View_from_900_kandi_IMG20260126154406.jpg" target="_blank" rel="noopener">SijiR</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener license">CC BY-SA 4.0</a></>}
-      aside={<FactBox rows={[['From the villa', '9 km'], ['From Meppadi town', 'About 14 km'], ['Getting there', 'Jeep from Meppadi'], ['Tickets', 'Bought at the site'], ['Best season', 'October to May']]} />}
+      aside={<FactBox rows={[['From the villa', '9 km'], ['Getting there', 'Jeep from Meppadi'], ['Tickets', 'Bought at the site'], ['Best season', 'October to May']]} />}
       sources={[['Wikipedia: 900 Kandi', 'https://en.wikipedia.org/wiki/900_Kandi'], ['Housing.com: Wayanad glass bridge guide', 'https://housing.com/news/travellers-guide-to-wayanad-glass-bridge']]}
       next={{ href: '/kanthanpara-waterfalls/', title: 'Kanthanpara Falls', img: 'exterior-path' }}
       about={{ '@type': 'TouristAttraction', name: '900 Kandi', address: { '@type': 'PostalAddress', addressLocality: 'Meppadi', addressRegion: 'Wayanad, Kerala', addressCountry: 'IN' } }}>

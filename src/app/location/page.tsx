@@ -22,7 +22,7 @@ export default function Page() {
             <div className="c-9-4 note" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               <p className="cap cap--pool">Address</p>
               <p className="d4">{site.name}<br />{site.fullAddress ? <>{site.fullAddress}<br /></> : null}{site.locality}, {site.district}, {site.state}{site.postalCode ? ` ${site.postalCode}` : ''}</p>
-              {site.plusCode && <p className="small">Google Maps plus code: {site.plusCode} Meppadi</p>}
+              {site.plusCode && <p className="small">Google Maps plus code: {site.plusCode} Meppadi. Some booking sites list the villa under Vythiri or Kottappadi; it is in Kappamkolly, Meppadi.</p>}
               {site.mapUrl && <a className="btn btn--dark" href={site.mapUrl} target="_blank" rel="noopener">Get directions on Google Maps</a>}
               {site.phone && <p className="small">Lost on the way? Call <a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></p>}
             </div>

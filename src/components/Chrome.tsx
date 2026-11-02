@@ -1,5 +1,6 @@
 import { nav, site } from '@/content/site';
-import { BookButton } from './Book';
+import { BookButton, waLink } from './Book';
+import { Icon } from './Icons';
 
 const menuLinks = [
   { href: '/', label: 'Home' },
@@ -42,7 +43,7 @@ export function Header({ current, over = false }: { current?: string; over?: boo
                 {menuLinks.map((n, i) => (
                   <li key={n.href}>
                     <a href={n.href} aria-current={current === n.href ? 'page' : undefined}>
-                      <span>{n.label}</span><span className="cap">{String(i).padStart(2, '0')}</span>
+                      <span>{n.label}</span><span className="cap" aria-hidden="true">{String(i).padStart(2, '0')}</span>
                     </a>
                   </li>
                 ))}
@@ -88,7 +89,7 @@ export function Footer() {
           </div>
         </div>
         <div className="ftr__base">
-          <span>{site.name} · {site.locality}, {site.district}, {site.state}, India</span>
+          <span>{site.name} · {site.fullAddress ? `${site.fullAddress}, ` : ''}{site.locality}, {site.district}, {site.state} {site.postalCode}, India{site.phone ? ` · ${site.phoneDisplay}` : ''}</span>
           <span>Registration no. {site.registrationNo} · © {new Date().getFullYear()}</span>
         </div>
       </div>
@@ -99,8 +100,10 @@ export function Footer() {
 export function StickyBar() {
   return (
     <div className="bar" role="complementary" aria-label="Book your stay">
-      <p className="bar__t"><b>The whole villa, yours</b><span>4 bedrooms · pool · {site.maxGuests} guests</span></p>
-      <BookButton className="btn btn--dark">Book now</BookButton>
+      <p className="bar__t"><b>★ {site.ratings.google.score.toFixed(1)} on Google</b><span>Whole villa, {site.maxGuests} guests</span></p>
+      {waLink ? <a className="bar__wa" href={waLink} target="_blank" rel="noopener" aria-label="WhatsApp us" data-track="whatsapp"><Icon name="wa" size={24} /></a>
+        : site.phone ? <a className="bar__wa" href={`tel:${site.phone}`} aria-label={`Call ${site.phoneDisplay}`} data-track="call"><Icon name="phone" size={22} /></a> : null}
+      <BookButton className="btn btn--dark">Check dates</BookButton>
     </div>
   );
 }

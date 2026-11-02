@@ -17,7 +17,7 @@ export const places: Place[] = [
     text: 'A smaller, quieter waterfall a short walk from the road, with a pool and rocks at its base.',
     img: 'place-kanthanpara', alt: 'Kanthanpara Falls pouring over wide rock shelves into a pool', credit: { by: 'Ingo Mehling', file: 'Wayanad - Kanthanpara Waterfalls - 1.jpg' } },
   { id: 'chembra', name: 'Chembra Peak', km: 12, type: 'peak', effort: 'Full-day trek, guided', effortIcon: 'boot',
-    text: 'At 2,100 m, the highest point in the area. Treks start near Meppadi and run with local forest guides, past a heart-shaped lake.',
+    text: 'At 2,100 m, the highest point in the area. Treks start near Meppadi and run with local forest guides, past a heart-shaped lake. The forest department sometimes closes the trek, so check before you go.',
     img: 'place-chembra', alt: 'The heart-shaped lake on the Chembra Peak trek', credit: { by: 'Ravi Dwivedi', file: 'Chembra Peak Heart Lake.jpg' } },
   { id: 'soochipara', name: 'Soochipara Falls', km: 15, type: 'waterfall', effort: 'Forest path', effortIcon: 'walk',
     text: 'Also called Sentinel Rock Falls, reached by a forest path from the road. Best after the monsoon.',

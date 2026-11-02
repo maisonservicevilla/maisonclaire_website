@@ -5,8 +5,8 @@ import { Crumbs, NextChapter } from '@/components/Bits';
 import { BookingBand, TitleBlock } from '@/components/Sections';
 import { InShort } from '@/components/Sections';
 
-export const metadata = meta('/kitchen-dining/', 'Self Catering Villa in Wayanad with Full Kitchen | Maison Claire',
-  'Cook your own meals at Maison Claire, a self catering villa in Meppadi, Wayanad: full kitchen with fridge, hob, microwave and washing machine, plus a table for eight.', { image: 'kitchen-evening' });
+export const metadata = meta('/kitchen-dining/', 'Self Catering Villa in Wayanad | Full Kitchen, Meppadi',
+  'Cook your own meals at Maison Claire, a self catering villa in Meppadi, Wayanad: a full kitchen with fridge, hob and microwave, and a table for eight.', { image: 'kitchen-evening' });
 
 export default function Page() {
   return (
@@ -15,7 +15,7 @@ export default function Page() {
       <main id="main">
         <TitleBlock
           crumbs={<Crumbs items={[['/the-villa/', 'The villa'], ['/kitchen-dining/', 'Kitchen & dining']]} />}
-          title={<>A self-catering villa: <em>cook what you like</em></>}
+          title={<>A self-catering villa in Wayanad: <em>cook what you like</em></>}
           intro={<p>Maison Claire is self-catering. The kitchen is a proper one, not a kettle-and-microwave corner, and the dining table seats eight.</p>}
         />
         <section className="wrap" style={{ paddingBottom: 'var(--space)' }}>
@@ -40,7 +40,7 @@ export default function Page() {
           </div>
         </section>
         <InShort>
-          <p>A self-catering villa in Wayanad: a villa with a fully equipped kitchen in Wayanad, a table for eight and a pool. It is a self-catering villa for families with small children, who can keep to their own mealtimes, and a family-friendly holiday villa with self-catering facilities about 200 m from restaurants.</p>
+          <p>Maison Claire is a self-catering villa in Wayanad: cook in a fully equipped kitchen, eat at the table for eight, or walk 200 m to the nearest restaurants. Families with small children keep to their own mealtimes.</p>
         </InShort>
 
         <section className="section band-mist">

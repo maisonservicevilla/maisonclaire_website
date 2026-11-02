@@ -2,7 +2,7 @@ import { meta } from '@/lib/meta';
 import { Guide, FactBox } from '@/components/Guide';
 
 const d = 'Bangalore to Wayanad by road: the Mysuru–Bandipur route, 280–310 km, drive time, the 9 PM–6 AM forest closure and stops on the way to Meppadi.';
-export const metadata = meta('/bangalore-to-wayanad/', 'Bangalore to Wayanad by Road: Route, Distance & Bandipur Timings', d, { image: 'pool-view-portrait', type: 'article' });
+export const metadata = meta('/bangalore-to-wayanad/', 'Bangalore to Wayanad by Road: Route & Bandipur Timings', d, { image: 'pool-view-portrait', type: 'article' });
 
 export default function Page() {
   return (

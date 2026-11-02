@@ -9,7 +9,7 @@ export const metadata = meta('/meppadi/', 'Where to Stay in Meppadi, Wayanad | P
 export default function Page() {
   return (
     <Guide path="/meppadi/" crumbs={[['/location/', 'Location'], ['/meppadi/', 'Staying in Meppadi']]}
-      title={<>Staying in Meppadi, <em>south Wayanad</em></>} headline="Where to stay in Meppadi, Wayanad" description={d}
+      title={<>Where to stay in Meppadi, <em>south Wayanad</em></>} headline="Where to stay in Meppadi, Wayanad" description={d}
       intro={<p>Meppadi is a small hill town about 12 km from Kalpetta. It sits close to Chembra Peak, Soochipara Falls and the 900 Kandi forest, which makes it a practical base for south Wayanad.</p>}
       img="exterior-day" imgAlt="Maison Claire villa in Meppadi with its garden path" imgCaption="Maison Claire, in the hills around Meppadi."
       aside={<FactBox rows={[['From Kalpetta', 'About 12 km'], ['Kozhikode station', 'About 78 km'], ['Calicut airport', 'About 87 km'], ['Chembra Peak', '12 km from the villa'], ['Soochipara Falls', '15 km from the villa']]} />}

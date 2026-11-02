@@ -22,7 +22,7 @@ export default function Page() {
       <main id="main">
         <TitleBlock crumbs={<Crumbs items={[['/the-villa/', 'The villa'], ['/gallery/', 'Gallery']]} />}
           title={<>Maison Claire villa photos, <em>every room as it is</em></>}
-          intro={<p>All photos are of Maison Claire itself, taken by a professional photographer. Nothing staged from somewhere else.</p>} />
+          intro={<p>Every photo here is of Maison Claire itself: the pool, the bedrooms, the lounges and the kitchen, as they are.</p>} />
         <nav className="wrap" aria-label="Photo sections" style={{ marginBottom: 'clamp(28px,4vw,48px)' }}>
           <div className="chips">{groups.map((g) => <a key={g.id} href={`#${g.id}`}>{g.title} <span className="cap cap--muted" style={{ marginLeft: 8 }}>{g.items.length}</span></a>)}</div>
         </nav>

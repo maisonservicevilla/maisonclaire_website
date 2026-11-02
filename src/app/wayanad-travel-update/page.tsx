@@ -2,7 +2,7 @@ import { meta } from '@/lib/meta';
 import { Guide, FactBox, UPDATED_TEXT } from '@/components/Guide';
 
 const d = 'Is Wayanad safe to visit now? A dated October 2026 update on Meppadi and Wayanad: weather, rain-alert closures, the 2024 landslide area and how to check.';
-export const metadata = meta('/wayanad-travel-update/', 'Is Wayanad Safe to Visit Now? Travel Update, October 2026', d, { image: 'balcony-view', type: 'article' });
+export const metadata = meta('/wayanad-travel-update/', 'Is Wayanad Safe to Visit Now? Wayanad Travel Update', d, { image: 'balcony-view', type: 'article' });
 
 export default function Page() {
   return (

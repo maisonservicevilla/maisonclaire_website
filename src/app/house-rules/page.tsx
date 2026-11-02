@@ -10,7 +10,7 @@ export const metadata = meta('/house-rules/', 'Maison Claire House Rules | Check
 export default function Page() {
   const rules: [string, string][] = [
     ['Check-out', `By ${site.checkOut}.${site.checkIn ? ` Check-in from ${site.checkIn}.` : ''}`],
-    ['Self check-in', 'You let yourselves in with a door keypad. The code is shared before arrival.'],
+    ['Self check-in', 'You let yourselves in with a door keypad.'],
     ['Guests', `Up to ${site.maxGuests} guests: two per bedroom, plus one extra guest in each room.`],
     ['Photo ID', 'Every guest needs one: passport, Aadhaar, driving licence or another government ID.'],
     ['Main guest', 'The person who books must be 18 or older and stay at the villa.'],
@@ -23,7 +23,7 @@ export default function Page() {
       <Header />
       <main id="main">
         <TitleBlock crumbs={<Crumbs items={[['/the-villa/', 'The villa'], ['/house-rules/', 'House rules']]} />}
-          title={<>Maison Claire house rules, <em>plainly</em></>} intro={<p>A short list so everyone knows what to expect. Cancellation terms are shown in the booking window before you pay.</p>} />
+          title={<>Maison Claire <em>house rules</em></>} intro={<p>A short list so everyone knows what to expect. Cancellation terms are shown in the booking window before you pay.</p>} />
         <section className="wrap" style={{ paddingBottom: 'var(--space)', maxWidth: 1000 }}>
           <ol className="ledger rules">
             {rules.map(([k, v], i) => (

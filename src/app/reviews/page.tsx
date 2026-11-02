@@ -5,7 +5,7 @@ import { Crumbs, NextChapter } from '@/components/Bits';
 import { BookingBand, TitleBlock, BookButton } from '@/components/Sections';
 
 export const metadata = meta('/reviews/', 'Maison Claire Villa Wayanad Reviews | Guest Ratings',
-  `Guest ratings for Maison Claire Service Villa, Meppadi: ${site.ratings.google.score.toFixed(1)}/5 on Google from ${site.ratings.google.count} reviews, ${site.ratings.airbnb.score}/5 on Airbnb from ${site.ratings.airbnb.count} reviews and ${site.ratings.expedia.score}/10 on Expedia. Read them on each platform.`);
+  `Guest ratings for Maison Claire Villa, Meppadi: ${site.ratings.google.score.toFixed(1)}/5 on Google from ${site.ratings.google.count} reviews, ${site.ratings.airbnb.score}/5 on Airbnb and ${site.ratings.expedia.score}/10 on Expedia. Read them on each site.`);
 
 export default function Page() {
   const r = site.ratings;

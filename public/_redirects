@@ -1,0 +1,7 @@
+# Old or short paths people may type
+/book /rates-booking/ 301
+/booking /rates-booking/ 301
+/rates /rates-booking/ 301
+/photos /gallery/ 301
+/rooms /bedrooms/ 301
+/pool /private-pool/ 301

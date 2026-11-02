@@ -5,20 +5,19 @@ import { Img } from '@/components/Img';
 import { Crumbs, NextChapter } from '@/components/Bits';
 import { BookingBand, TitleBlock } from '@/components/Sections';
 
-export const metadata = meta('/bedrooms/', `Villa with ${site.ac ? 'Air-Conditioned' : 'King'} Bedrooms in Wayanad | Maison Claire`,
-  `Four king bedrooms${site.ac ? ' with AC' : ''}, each with its own bathroom and balcony, three with hill views. A 4 bedroom villa in Meppadi, Wayanad that sleeps 8.`, { image: 'bedroom-mountain-view' });
+export const metadata = meta('/bedrooms/', `Villa with ${site.ac ? 'AC' : 'King'} Bedrooms in Wayanad | Maison Claire`,
+  `Four king bedrooms${site.ac ? ' with AC' : ''}, each with its own bathroom, two facing Chembra Peak. A 4 bedroom villa in Meppadi, Wayanad for up to 12.`, { image: 'bedroom-mountain-view' });
 
 const looks = [
-  { img: 'bedroom-mountain-view', alt: 'Bedroom with a king bed and glass doors to a balcony facing the mountains', h: 'The hill view', t: 'Glass doors open onto a balcony that faces the mountains.' },
+  { img: 'bedroom-mountain-view', alt: 'Bedroom with a king bed and glass doors to a balcony facing the mountains', h: 'The peak view', t: 'Two of the bedrooms look straight out at Chembra Peak.' },
   { img: 'bedroom-balcony', alt: 'Bedroom with a carved wooden king bed and doors to a balcony', h: 'The carved bed', t: 'A carved wooden king bed and a balcony over the trees.' },
   { img: 'bedroom-grey', alt: 'Bedroom with a grey upholstered king bed and a framed sunset painting', h: 'The grey room', t: 'A grey upholstered king bed, wardrobe and dressing area.' },
   { img: 'bedroom-view-warm', alt: 'Evening light in a bedroom with balcony doors looking out to the hills', h: 'Evenings', t: 'Warm light inside, the hills outside the balcony doors.' },
 ];
 const plan: [string, string, string][] = [
-  ['Bedroom 1', 'Ground floor', 'King bed · own bathroom · hill-view balcony'],
-  ['Bedroom 2', 'Upstairs', 'King bed · own bathroom · hill-view balcony'],
-  ['Bedroom 3', 'Upstairs', 'King bed · own bathroom · hill-view balcony'],
-  ['Bedroom 4', 'Upstairs', 'King bed · own bathroom · balcony'],
+  ['Ground floor', '2 king bedrooms', 'Each with its own bathroom. Easy for grandparents: no stairs.'],
+  ['Upstairs', '2 king bedrooms', 'Each with its own bathroom.'],
+  ['Chembra Peak view', '2 of the 4 rooms', 'Wake up facing the highest peak in Wayanad.'],
 ];
 
 export default function Page() {
@@ -28,8 +27,8 @@ export default function Page() {
       <main id="main">
         <TitleBlock
           crumbs={<Crumbs items={[['/the-villa/', 'The villa'], ['/bedrooms/', 'Bedrooms']]} />}
-          title={<>Four {site.ac ? 'air-conditioned ' : ''}king bedrooms, <em>no small one</em></>}
-          intro={<p>Every bedroom at Maison Claire has a king bed, its own bathroom and a balcony{site.ac ? ', and they are air-conditioned' : ''}. Three of them look out at the hills. Nobody in your group draws the short straw.</p>}
+          title={<>Four {site.ac ? 'air-conditioned ' : ''}king bedrooms in Wayanad, <em>two facing the peak</em></>}
+          intro={<p>Every bedroom at Maison Claire has a king bed and its own bathroom{site.ac ? ', and all four are air-conditioned' : ''}. Two are on the ground floor and two upstairs, and two of them look out at Chembra Peak.</p>}
         />
         <section className="wrap" style={{ paddingBottom: 'var(--space)' }}>
           <div className="cards cards--4 cards--stagger cards--2m">
@@ -63,7 +62,7 @@ export default function Page() {
                   <li key={n}><span className="plan__n">{n}</span><span className="cap cap--muted">{w}</span><span className="plan__d">{d}</span></li>
                 ))}
               </ol>
-              <p className="lead" style={{ marginTop: 24 }}>{site.sleeps} guests sleep in the four king beds{site.ac ? ', and every room is air-conditioned' : ''}. Each room also takes one extra guest, so the villa sleeps up to {site.maxGuests}. If you want a villa with air-conditioned bedrooms in Wayanad, this is an AC villa in Wayanad: a villa with four air-conditioned bedrooms, all the same size.</p>
+              <p className="lead" style={{ marginTop: 24 }}>{site.sleeps} guests sleep in the four king beds{site.ac ? ', and every room is air-conditioned' : ''}. Each room also takes one extra guest, so the villa sleeps up to {site.maxGuests}. If you are looking for an AC villa in Wayanad, all four bedrooms here are air-conditioned.</p>
             </div>
           </div>
         </section>

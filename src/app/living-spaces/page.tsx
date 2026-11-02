@@ -5,7 +5,7 @@ import { Crumbs, NextChapter } from '@/components/Bits';
 import { BookingBand, TitleBlock } from '@/components/Sections';
 
 export const metadata = meta('/living-spaces/', 'Villa with Multiple Living Rooms in Wayanad | Maison Claire',
-  'Three separate lounges, balconies and a terrace with mountain views. Space for a big family or group to be together, or apart, at Maison Claire in Meppadi, Wayanad.', { image: 'living-warm' });
+  'Three separate lounges and a terrace with mountain views: room for a big family or group to be together, or apart, at Maison Claire in Meppadi, Wayanad.', { image: 'living-warm' });
 
 export default function Page() {
   return (
@@ -14,8 +14,8 @@ export default function Page() {
       <main id="main">
         <TitleBlock
           crumbs={<Crumbs items={[['/the-villa/', 'The villa'], ['/living-spaces/', 'Living spaces']]} />}
-          title={<>Three living rooms, so the group can be <em>together, or not</em></>}
-          intro={<p>Big groups need more than one room to sit in. Maison Claire has three separate lounges, one with a TV, plus balconies and a terrace that face the hills.</p>}
+          title={<>Three living rooms in one villa, so the group can be <em>together, or not</em></>}
+          intro={<p>Big groups need more than one room to sit in. Maison Claire has three separate lounges, one with a TV, plus a terrace that faces the hills.</p>}
         />
         <section className="wrap" style={{ paddingBottom: 'var(--space)' }}>
           <div className="cards cards--3">
@@ -30,7 +30,7 @@ export default function Page() {
             <div className="c-8-5 stack">
               <p className="cap cap--pool">Outside</p>
               <h2 className="d2">Balconies and <em>a mountain-view terrace</em></h2>
-              <p className="lead">Every bedroom opens onto a balcony, and the terrace looks across the treetops to the peaks. Mornings here are slow for a reason.</p>
+              <p className="lead">The terrace looks across the treetops to the peaks, and two of the bedrooms face Chembra Peak.</p>
             </div>
           </div>
         </section>

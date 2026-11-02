@@ -1,5 +1,5 @@
 import { site } from '@/content/site';
-import { BookButton, BookingMount } from './Book';
+import { BookButton, BookingMount, ContactLinks } from './Book';
 import { Img } from './Img';
 
 export function BookingBand({ title = 'Check dates for your stay', text = 'Choose your dates and group size to see live availability and the price for the whole villa.' }: { title?: string; text?: string }) {
@@ -10,6 +10,8 @@ export function BookingBand({ title = 'Check dates for your stay', text = 'Choos
           <img src="/brand/mark-cream.svg" alt="" width={56} height={56} loading="lazy" style={{ width: 56, height: 'auto' }} />
           <h2 id="book-band" className="d2">{title}</h2>
           <p style={{ color: 'var(--linen)' }}>{text}</p>
+          <p className="small">Prefer to talk first?</p>
+          <ContactLinks compact />
         </div>
         <div className="c-7-6"><BookingMount mode="search" /></div>
       </div>
@@ -38,10 +40,10 @@ export function DayTimeline() {
 }
 
 export const rooms = [
-  { name: 'Hill-view bedroom', img: 'bedroom-mountain-view', alt: 'Bedroom with a king bed and glass doors to a balcony facing the mountains', desc: 'Four king bedrooms, each with its own bathroom and a balcony. Three face the hills.' },
+  { name: 'Peak-view bedroom', img: 'bedroom-mountain-view', alt: 'Bedroom with a king bed and glass doors facing the mountains', desc: 'Four king bedrooms with their own bathrooms, two on each floor. Two face Chembra Peak.' },
   { name: 'Carved-bed room', img: 'bedroom-balcony', alt: 'Bedroom with a carved wooden king bed and doors to a balcony', desc: 'A carved wooden king bed and a balcony over the trees.' },
   { name: 'Grey room', img: 'bedroom-grey', alt: 'Bedroom with a grey upholstered king bed and a framed painting', desc: 'A grey upholstered king bed and a dressing area.' },
-  { name: 'Balconies', img: 'bedroom-garden', alt: 'Bedroom doors open to a balcony looking onto palm trees and hills', desc: 'Every bedroom opens onto a balcony.' },
+  { name: 'Balconies', img: 'bedroom-garden', alt: 'Bedroom doors open to a balcony looking onto palm trees and hills', desc: 'Balconies look out over the palms to the hills.' },
   { name: 'Lounges', img: 'living-teal', alt: 'Lounge with a teal sofa and windows onto the hills', desc: 'Three separate lounges, one with a TV, so the group can spread out.' },
   { name: 'Kitchen', img: 'kitchen', alt: 'Kitchen with a fridge, hob, chimney and microwave', desc: 'A full kitchen with fridge, hob and chimney, microwave and washing machine.' },
   { name: 'Dining', img: 'dining-staircase', alt: 'Dining table for eight beside the glass staircase', desc: 'A table for eight beside the glass staircase.' },
@@ -120,9 +122,8 @@ export const sleepsText = `${site.bedrooms} king bedrooms, sleeps ${site.sleeps}
 /** "In short": a plain, factual answer block near the top of a page. Written for people first; it also gives search engines and AI assistants clear facts. */
 export function InShort({ children, band = false }: { children: React.ReactNode; band?: boolean }) {
   return (
-    <section className={band ? 'band-mist section--tight' : 'section--tight'} aria-label="In short">
+    <section className={band ? 'band-mist section--tight' : 'section--tight'} aria-label="About the villa">
       <div className="wrap g12">
-        <p className="c-1-2 cap cap--pool" style={{ paddingTop: 6 }}>In short</p>
         <div className="c-3-8 lead body">{children}</div>
       </div>
     </section>

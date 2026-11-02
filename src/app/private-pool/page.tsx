@@ -37,7 +37,7 @@ export default function Page() {
         </section>
 
         <InShort band>
-          <p>A private pool villa in Wayanad: only the group staying here uses the pool. That makes it a private pool villa for families with children who want to swim without strangers, and a villa with a swimming pool for groups of friends who want the water to themselves after dark. Travelling with grandparents too? It works as a private pool villa for family trips of up to {site.maxGuests}.</p>
+          <p>Only your group uses the pool, and it has underwater lights, so you can swim after dark. For families with children it means a private pool villa with no strangers at the poolside.</p>
         </InShort>
 
         <section className="band-dark section--tight" aria-label="Pool details">

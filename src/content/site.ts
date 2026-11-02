@@ -32,7 +32,8 @@ export const site = {
   floors: 2,
   lounges: 3,
   diningSeats: 8,
-  ac: true, // AC units visible in the bedroom photos. OWNER TO CONFIRM all four rooms have AC.
+  ac: true, // confirmed by owner: all four bedrooms have AC
+  bookingMode: 'request' as 'request' | 'instant', // confirmed by owner: Innrow bookings are requests the owner approves
 
   // ---- OWNER TO CONFIRM (null = hidden on the site) ----
   checkIn: null as string | null, // Airbnb says 3 PM, MakeMyTrip says 2 PM
@@ -53,7 +54,7 @@ export const site = {
   geo: { lat: 11.5636875, lng: 76.1231875 } as { lat: number; lng: number } | null,
   phone: '+918006001367' as string | null, // Google Business Profile + Instagram
   phoneDisplay: '+91 80060 01367',
-  whatsapp: null as string | null,
+  whatsapp: '+918006001367' as string | null, // confirmed by owner: same as phone
   email: 'maisonservicevilla@gmail.com' as string | null, // published on the villa's Instagram
 
   ratings: {

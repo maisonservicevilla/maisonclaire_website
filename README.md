@@ -27,8 +27,9 @@ published. Fill these in and redeploy:
 | `poolSize`, `poolHours` | Pool page | Unknown. Hidden. |
 | `fullAddress`, `mapUrl`, `geo` | Location page, Google, AI assistants | From the Google Business Profile (Kappamkolly, 673577). |
 | `phone`, `whatsapp`, `email` | Contact page, schema | Phone and email from Google profile and Instagram. WhatsApp: confirm. |
-| `ac: true` | Bedrooms page and keywords | AC units are visible in the bedroom photos. **Confirm all four rooms have AC**, or set to `false`. |
-| Bedroom photos | Bedrooms page | Confirm which photo is which bedroom (`src/app/bedrooms/page.tsx`). |
+| `ac: true` | Bedrooms page and keywords | Confirmed: all four bedrooms have AC. |
+| Bedroom layout | Bedrooms, family, FAQ | Confirmed: 2 bedrooms on the ground floor, 2 upstairs; 2 face Chembra Peak. Photos are captioned by what they show, not by room number. |
+| `whatsapp`, `bookingMode` | Booking fallbacks, FAQ | Confirmed: WhatsApp on +91 80060 01367; Innrow bookings are requests the owner approves. |
 | `ratings` | Home, reviews | Figures as of October 2026. Update every few months. |
 
 Also set the domain (step 2). Locality: the site uses **Meppadi** everywhere.
@@ -59,7 +60,7 @@ If it is wrong, Google will be pointed at the wrong address, so set it before th
 4. Run PageSpeed Insights on the live home page.
 5. Validate structured data at https://validator.schema.org and Google's Rich Results Test.
 6. Add the website link to Instagram and every OTA profile that allows it.
-7. Analytics (optional): add Google Tag Manager or GA4 in `src/app/layout.tsx`. Innrow sends
+7. Analytics (recommended): turn on **Cloudflare Web Analytics** for the Pages project (Workers & Pages → maison-claire → Metrics → Web Analytics). It sets no cookies, needs no consent banner and keeps Lighthouse at 100. Or add Google Tag Manager or GA4 in `src/app/layout.tsx`. Innrow sends
    `innrow_search` and `innrow_request` events to it automatically. Update `/privacy/` when you do.
 
 ## 4. How things work

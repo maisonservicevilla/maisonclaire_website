@@ -24,7 +24,7 @@ export function Landing(p: {
           </div>
         </PhotoHero>
         <section className="section wrap">
-          <div className="chapter"><p className="cap cap--pool">Why it works</p><div className="d3">{p.lead}</div></div>
+          <div className="chapter"><p className="cap cap--pool">{p.crumb}</p><div className="d3">{p.lead}</div></div>
         </section>
         {p.module}
         {p.points && p.points.length > 0 && (

@@ -10,7 +10,7 @@ import { InShort } from '@/components/Sections';
 export const metadata = meta(
   '/',
   'Private Pool Villa in Wayanad | Maison Claire, Meppadi',
-  'Book the whole of Maison Claire: a 4-bedroom villa in Meppadi, Wayanad with a private infinity pool facing the hills, a full kitchen and room for up to 12. Check live dates.',
+  'Book the whole of Maison Claire, a 4-bedroom villa in Meppadi, Wayanad with a private infinity pool, a full kitchen and room for up to 12. Check live dates.',
 );
 
 const faqs: QA[] = [
@@ -89,7 +89,7 @@ export default function Home() {
         </section>
 
         <InShort>
-          <p>Maison Claire is an entire villa for rent in Wayanad: a private villa in Meppadi, Wayanad, let to one group at a time, with the pool, kitchen and three lounges to yourselves. That makes it an exclusive holiday villa for families, and a villa for friends and family in Wayanad who want a peaceful villa stay in Wayanad rather than a hotel. If you are looking for a holiday villa near Meppadi, Wayanad, you can see live dates and book it here.</p>
+          <p>Maison Claire is an entire villa for rent in Wayanad, let to one group at a time: a private villa in Meppadi with its own pool, kitchen and three lounges. If you want a peaceful villa stay in Wayanad rather than a hotel corridor, check your dates here.</p>
         </InShort>
 
         {/* 02 INSIDE */}
@@ -148,7 +148,7 @@ export default function Home() {
             <a className="card" href="/group-stay-villa-wayanad/">
               <div className="ph ratio-43"><Img name="pool-dusk" alt="The private pool at dusk with the mountains beyond" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 45vw, 100vw" /></div>
               <h3 className="d4">Trips with friends <span aria-hidden="true">→</span></h3>
-              <p>Four equal king bedrooms, so nobody gets the small room. Long evenings by the pool.</p>
+              <p>Four king bedrooms with their own bathrooms, three lounges, and long evenings by the pool.</p>
             </a>
             <a className="card" href="/weekend-villa-wayanad/">
               <div className="ph ratio-43"><Img name="bedroom-view-warm" alt="Warm-lit bedroom with balcony doors" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 45vw, 100vw" /></div>
