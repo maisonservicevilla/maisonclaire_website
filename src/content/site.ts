@@ -6,7 +6,7 @@
  * pages hide anything that is null, so nothing unconfirmed is ever published.
  */
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://maisonclaire.in').replace(/\/$/, '');
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maisonclaire.in').replace(/\/$/, '');
 
 export const site = {
   name: 'Maison Claire Service Villa',

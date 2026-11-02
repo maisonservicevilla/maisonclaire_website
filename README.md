@@ -43,7 +43,7 @@ Make the OTA listings match (some say Vythiri / Kottappadi part).
    - Framework preset: **None**
    - Build command: `npm run build`
    - Build output directory: `out`
-   - Environment variable: `NEXT_PUBLIC_SITE_URL` = `https://your-domain` (no trailing slash), e.g. `https://maisonclaire.in`
+   - Environment variable: `NEXT_PUBLIC_SITE_URL` = `https://your-domain` (no trailing slash), e.g. `https://www.maisonclaire.in`
    - Environment variable: `NODE_VERSION` = `22`
 4. Save and deploy. Then **Custom domains → Set up a custom domain** and follow the DNS steps.
 5. `public/_headers` sets long caching for images and fonts automatically.
