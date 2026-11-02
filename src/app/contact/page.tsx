@@ -29,7 +29,7 @@ export default function Page() {
               <p className="small" style={{ marginTop: 24 }}>Booked through Airbnb, Booking.com or another site? Message us through that site so your booking details stay in one place.</p>
             </div>
             <div className="c-9-4 stack">
-              <div className="ph ratio-43"><Img name="exterior-day" alt="Maison Claire villa and its lawn in daylight" sizes="(min-width: 900px) 30vw, 100vw" /></div>
+              <div className="ph ratio-43"><Img name="exterior-day" alt="Maison Claire villa and its lawn in daylight" priority sizes="(min-width: 900px) 30vw, 100vw" /></div>
               <div className="note stack-s">
                 <p className="cap cap--pool">Address</p>
                 <p className="d4">{site.fullAddress ? <>{site.fullAddress}, </> : null}{site.locality}, {site.district}, {site.state} {site.postalCode}</p>

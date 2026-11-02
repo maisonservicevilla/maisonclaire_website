@@ -170,8 +170,9 @@ html:has(.menu[open]) { overflow: hidden; }
 
 /* Day / Dusk switch (CSS only) */
 .dd-input { position: absolute; opacity: 0; pointer-events: none; }
-.dusk-img { opacity: 0; transition: opacity .6s ease; }
-#dd-dusk:checked ~ .hero__media .dusk-img { opacity: 1; }
+.dusk-img { display: none; opacity: 0; }
+#dd-dusk:checked ~ .hero__media .dusk-img { display: block; opacity: 1; transition: opacity .6s ease; }
+@starting-style { #dd-dusk:checked ~ .hero__media .dusk-img { opacity: 0; } }
 .dd { display: inline-flex; padding: 3px; border: 1px solid rgba(244,239,230,.6); border-radius: 999px; }
 .dd label { min-height: 44px; -webkit-tap-highlight-color: transparent; transition: background-color .25s, color .25s; min-width: 64px; display: inline-flex; align-items: center; justify-content: center; padding: 0 16px; border-radius: 999px; cursor: pointer; font-size: 15px; }
 #dd-day:checked ~ .hero__body label[for='dd-day'], #dd-dusk:checked ~ .hero__body label[for='dd-dusk'] { background: var(--paper); color: var(--bark); }
@@ -205,7 +206,7 @@ figcaption { margin-top: 12px; }
 .rx__tabs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin-inline: calc(var(--gutter) * -1); padding: 0 var(--gutter) 6px; }
 .rx__tabs::-webkit-scrollbar { display: none; }
 .rx__tab { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 14px; min-height: 44px; padding: 0 16px; border: 1px solid #b9ae96; border-radius: 999px; cursor: pointer; white-space: nowrap; color: var(--bark); }
-.rx__num { font-size: 11px; letter-spacing: .2em; color: inherit; opacity: .8; }
+.rx__num { font-size: 11px; letter-spacing: .2em; color: inherit; }
 .rx__fig { display: none; }
 .rx__fig figcaption { display: flex; gap: 16px; align-items: baseline; color: var(--ink); }
 @media (min-width: 900px) {

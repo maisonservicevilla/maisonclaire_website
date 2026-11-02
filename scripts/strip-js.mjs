@@ -29,12 +29,16 @@ for await (const file of walk('out')) {
   const before = html.length;
   html = html
     .replace(/<link rel="preload" as="script"[^>]*>/g, '')
+    // preload only the two fonts used above the fold
+    .replace(/<link rel="preload" href="\/_next\/static\/media\/(cormorant_garamond_latin_300_italic|cormorant_garamond_latin_400_normal|jost_latin_500_normal)[^"]*" as="font"[^>]*\/?>/g, '')
     .replace(/<script src="\/_next\/[^"]*"[^>]*><\/script>/g, '')
     .replace(/<script id="_R_">[\s\S]*?<\/script>/g, '')
     .replace(/<script>[\s\S]*?<\/script>/g, '');
   html = await inlineCss(html);
   if (/\/_next\/static\/chunks\/[^"]+\.js/.test(html)) throw new Error('Leftover JS chunk in ' + file);
   removed += before - html.length; files++;
+  // on photo-hero pages the dark logo only appears after scrolling: don't preload it
+  if (html.includes('logo--paper')) html = html.replace(/<link rel="preload" href="\/brand\/logo-dark\.svg" as="image"\/?>/, '');
   await fs.writeFile(file, html);
 }
 // the .txt RSC payload files are only used by the client router
@@ -42,3 +46,5 @@ for await (const f of (async function* () { for (const e of await fs.readdir('ou
 // framework chunks are no longer referenced by any page
 for (const f of await fs.readdir('out/_next/static/chunks')) if (f.endsWith('.js')) await fs.rm(path.join('out/_next/static/chunks', f));
 console.log(`strip-js: ${files} pages, ${(removed / 1024).toFixed(0)} KB of framework script removed`);
+// Pages serves 404.html with a real 404 status; the extra copies are not needed
+for (const d of ['404', '_not-found']) await fs.rm(path.join('out', d), { recursive: true, force: true });

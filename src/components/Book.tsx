@@ -104,5 +104,5 @@ if(mn){mn.addEventListener('toggle',function(){var o=mn.open;['main','footer','.
 addEventListener('keydown',function(e){if(e.key==='Escape'&&mn.open){mn.open=false;mn.querySelector('summary').focus()}});}
 addEventListener('scroll',function(){if(!busy){busy=true;requestAnimationFrame(upd)}},{passive:true});
 addEventListener('resize',upd,{passive:true});
-upd();
+requestAnimationFrame(upd);
 })();`;
