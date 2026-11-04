@@ -7,25 +7,25 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "maisonclaire.villas"
         }
       ],
-      "destination": "https://maisonclaire.in/:path*",
+      "destination": "https://maisonclaire.in/$1",
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "www.maisonclaire.villas"
         }
       ],
-      "destination": "https://maisonclaire.in/:path*",
+      "destination": "https://maisonclaire.in/$1",
       "permanent": true
     },
     {
