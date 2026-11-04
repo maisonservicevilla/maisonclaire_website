@@ -31,6 +31,7 @@ export function lodgingSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'VacationRental',
+    additionalType: 'Villa',
     '@id': SITE_URL + '/#villa',
     name: s.name,
     alternateName: [s.shortName, 'Maison Claire Villa Wayanad', 'Maison Claire Service Villa Wayanad'],
@@ -47,9 +48,9 @@ export function lodgingSchema() {
     checkoutTime: s.checkOut24,
     numberOfRooms: s.bedrooms,
     ...(s.pets ? { petsAllowed: s.petsAllowed } : {}),
-    containsPlace: { '@type': 'Accommodation', additionalType: 'EntirePlace', numberOfBedrooms: s.bedrooms, numberOfBathroomsTotal: s.bathrooms, occupancy: { '@type': 'QuantitativeValue', value: s.maxGuests }, bed: { '@type': 'BedDetails', numberOfBeds: s.bedrooms, typeOfBed: 'King' } },
-    amenityFeature: amenities.map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })),
-    identifier: { '@type': 'PropertyValue', name: 'Property registration number', value: s.registrationNo },
+    containsPlace: { '@type': 'Accommodation', additionalType: 'EntirePlace', numberOfBedrooms: s.bedrooms, numberOfBathroomsTotal: s.bathrooms, occupancy: { '@type': 'QuantitativeValue', value: s.maxGuests }, bed: { '@type': 'BedDetails', numberOfBeds: s.bedrooms, typeOfBed: 'King' }, amenityFeature: amenities.map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })) },
+    identifier: s.registrationNo, // Google needs a plain text ID; this is the Kerala registration number
+    additionalProperty: { '@type': 'PropertyValue', name: 'Kerala property registration number', value: s.registrationNo },
     sameAs: [...Object.values(s.listings), s.instagram, ...(s.mapUrl ? [s.mapUrl] : [])],
     potentialAction: { '@type': 'ReserveAction', target: SITE_URL + '/rates-booking/' },
   };
