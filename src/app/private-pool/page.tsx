@@ -7,7 +7,7 @@ import { BookingBand, PhotoHero } from '@/components/Sections';
 import { InShort } from '@/components/Sections';
 
 export const metadata = meta('/private-pool/', 'Villa with Private Pool in Wayanad | Maison Claire, Meppadi',
-  'A private infinity-edge pool facing the Wayanad hills, used only by your group. Lit at night. Book the whole 4-bedroom villa in Meppadi for families and groups.', { image: 'pool-dusk' });
+  'A private infinity pool facing the Wayanad hills, only for your group and lit at night. Book the whole 4-bedroom villa in Meppadi.', { image: 'pool-dusk' });
 
 const faqs: QA[] = [
   { q: 'Is this a private pool villa for family trips with grandparents too?', a: <p>Yes. Two of the four bedrooms are on the ground floor, so older relatives can stay close to the pool and the garden without using the stairs.</p>, text: 'Yes. Two of the four bedrooms are on the ground floor, so older relatives can stay close to the pool and the garden without using the stairs.' },

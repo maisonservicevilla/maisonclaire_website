@@ -1,7 +1,7 @@
 import { meta } from '@/lib/meta';
 import { Guide, FactBox } from '@/components/Guide';
 
-const d = 'Kanthanpara Falls near Meppadi, Wayanad: a quieter waterfall a short walk from the road, about 30 m high. Entry, timings, when to visit and a villa 10 km away.';
+const d = 'Kanthanpara Falls near Meppadi, Wayanad: a quiet waterfall a short walk from the road. Entry, timings, best season and where to stay.';
 export const metadata = meta('/kanthanpara-waterfalls/', 'Kanthanpara Waterfalls, Wayanad: Visitor Guide & Stay Nearby', d, { image: 'pool-view-portrait', type: 'article' });
 
 export default function Page() {

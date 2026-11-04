@@ -36,7 +36,7 @@ const sans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: site.name,
-  icons: { icon: [{ url: '/icon.svg', type: 'image/svg+xml' }, { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' }], apple: '/apple-touch-icon.png' },
+  icons: { icon: [{ url: '/favicon.ico', sizes: '16x16 32x32 48x48' }, { url: '/icon.svg', type: 'image/svg+xml' }, { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' }, { url: '/icon-96.png', sizes: '96x96', type: 'image/png' }, { url: '/icon-192.png', sizes: '192x192', type: 'image/png' }], apple: '/apple-touch-icon.png' },
   manifest: '/manifest.webmanifest',
   formatDetection: { telephone: false },
 };

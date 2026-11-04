@@ -1,7 +1,7 @@
 import { meta } from '@/lib/meta';
 import { Guide, FactBox } from '@/components/Guide';
 
-const d = 'A practical guide to 900 Kandi and its glass bridge near Meppadi, Wayanad: how to get there by jeep, what to expect, when to go, and where to stay 9 km away.';
+const d = '900 Kandi glass bridge near Meppadi, Wayanad: how to get there by jeep, tickets, what to expect, when to go and where to stay 9 km away.';
 export const metadata = meta('/900-kandi-glass-bridge/', '900 Kandi Glass Bridge, Wayanad: Guide & Stay Nearby', d, { image: 'terrace-view', type: 'article' });
 
 export default function Page() {

@@ -10,7 +10,7 @@ import { InShort } from '@/components/Sections';
 export const metadata = meta(
   '/',
   'Private Pool Villa in Wayanad | Maison Claire, Meppadi',
-  'Book the whole of Maison Claire, a 4-bedroom villa in Meppadi, Wayanad with a private infinity pool, a full kitchen and room for up to 12. Check live dates.',
+  'Maison Claire is a private pool villa in Meppadi, Wayanad: 4 AC king bedrooms, an infinity pool facing the hills, up to 12 guests.',
 );
 
 const faqs: QA[] = [

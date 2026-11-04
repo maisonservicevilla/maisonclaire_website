@@ -7,7 +7,7 @@ import { SITE_URL } from '@/content/site';
 import manifest from '@/content/images.json';
 
 export const metadata = meta('/gallery/', 'Maison Claire Villa Photos | Wayanad Pool Villa Gallery',
-  'Photos of Maison Claire Service Villa in Meppadi, Wayanad: the infinity pool by day and at dusk, four king bedrooms, three lounges, the kitchen and the garden.', { image: 'pool-infinity-mountain' });
+  'Photos of Maison Claire, Meppadi, Wayanad: the infinity pool by day and at dusk, four king bedrooms, three lounges and the kitchen.', { image: 'pool-infinity-mountain' });
 
 const groups: { id: string; title: string; items: [string, string][] }[] = [
   { id: 'pool', title: 'The pool and garden', items: [['pool-infinity-mountain', 'Infinity pool facing the hills in morning light'], ['exterior-day', 'The two-storey villa from the garden'], ['pool-dusk', 'The pool at dusk under a pink sky'], ['pool-dusk-portrait', 'Pool lights at dusk'], ['pool-view-portrait', 'Pool edge with the mountains beyond'], ['villa-night-pool', 'The villa and pool at night'], ['exterior-pool', 'The rounded end of the pool beside the house'], ['exterior-path', 'Stone path across the lawn'], ['terrace-view', 'Terrace view over the trees']] },

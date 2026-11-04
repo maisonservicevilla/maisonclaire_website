@@ -9,7 +9,7 @@ const whoWhere: [string, string, string][] = [
 ];
 
 export const metadata = meta('/family-holiday-villa-wayanad/', 'Family Holiday Villa in Wayanad | Maison Claire, Meppadi',
-  'Family villa accommodation in Meppadi, Wayanad: four king bedrooms with bathrooms, two on the ground floor, a private pool and a full kitchen. Up to 12 guests.', { image: 'living-chesterfield' });
+  'A family villa in Meppadi, Wayanad: four king bedrooms with bathrooms, two on the ground floor, a private pool and a full kitchen.', { image: 'living-chesterfield' });
 
 export default function Page() {
   return (

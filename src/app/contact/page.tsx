@@ -7,7 +7,7 @@ import { Img } from '@/components/Img';
 import { BookingBand, TitleBlock } from '@/components/Sections';
 
 export const metadata = meta('/contact/', 'Contact Maison Claire Villa | Villa Booking Enquiry, Wayanad',
-  'Get in touch with Maison Claire Service Villa in Meppadi, Wayanad: call, email or check live dates in the booking window. Address and Google Maps directions.');
+  'Contact Maison Claire Service Villa, Meppadi, Wayanad: call or WhatsApp +91 80060 01367, email, or check live dates. Map and address.');
 
 export default function Page() {
   return (

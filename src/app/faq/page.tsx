@@ -5,7 +5,7 @@ import { Crumbs, Faq, NextChapter, type QA } from '@/components/Bits';
 import { BookingBand, TitleBlock } from '@/components/Sections';
 
 export const metadata = meta('/faq/', 'Wayanad Villa FAQ | Maison Claire Service Villa, Meppadi',
-  'Answers about staying at Maison Claire in Meppadi, Wayanad: guests, bedrooms, the private pool, kitchen, check-out, booking, getting here and what is nearby.');
+  'Answers about Maison Claire, Meppadi, Wayanad: guests, bedrooms, the private pool, kitchen, check-out, booking and getting here.');
 
 const T = (q: string, text: string, a?: React.ReactNode): QA => ({ q, text, a: a || <p>{text}</p> });
 

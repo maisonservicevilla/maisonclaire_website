@@ -8,7 +8,7 @@ import { BookingBand } from '@/components/Sections';
 import { SITE_URL } from '@/content/site';
 import { places, typeLabel, commons } from '@/content/places';
 
-const d = 'Things to do near Meppadi, Wayanad: 900 Kandi glass bridge, Kanthanpara and Soochipara falls, Chembra Peak, Edakkal Caves and more, with photos and distances.';
+const d = 'Things to do near Meppadi, Wayanad: 900 Kandi glass bridge, Kanthanpara and Soochipara falls, Chembra Peak and Edakkal Caves.';
 export const metadata = meta('/things-to-do-near-meppadi/', 'Things to Do near Meppadi, Wayanad: 7 Places & Distances', d, { image: 'place-chembra' });
 
 const counts = Object.entries(places.reduce<Record<string, number>>((a, p) => ({ ...a, [p.type]: (a[p.type] || 0) + 1 }), {}));

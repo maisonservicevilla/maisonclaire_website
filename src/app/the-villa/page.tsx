@@ -7,7 +7,7 @@ import { BookingBand, TitleBlock } from '@/components/Sections';
 import { InShort } from '@/components/Sections';
 
 export const metadata = meta('/the-villa/', '4 Bedroom Villa with Private Pool in Meppadi | Maison Claire',
-  'A two-storey, four-bedroom holiday home in Meppadi, Wayanad: king beds, attached bathrooms, three lounges, a full kitchen and a private pool. Up to 12 guests.', { image: 'exterior-day' });
+  'A two-storey, 4-bedroom holiday home in Meppadi, Wayanad: king beds, attached baths, three lounges, a full kitchen and a private pool.', { image: 'exterior-day' });
 
 export default function Page() {
   return (
