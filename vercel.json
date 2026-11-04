@@ -7,6 +7,28 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "maisonclaire.villas"
+        }
+      ],
+      "destination": "https://maisonclaire.in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.maisonclaire.villas"
+        }
+      ],
+      "destination": "https://maisonclaire.in/:path*",
+      "permanent": true
+    },
+    {
       "source": "/book/",
       "destination": "/rates-booking/",
       "permanent": true

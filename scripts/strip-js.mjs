@@ -42,7 +42,7 @@ for await (const file of walk('out')) {
   await fs.writeFile(file, html);
 }
 // the .txt RSC payload files are only used by the client router
-for await (const f of (async function* () { for (const e of await fs.readdir('out', { recursive: true })) if (e.endsWith('.txt') && !e.endsWith('robots.txt') && !e.endsWith('llms.txt')) yield e; })()) await fs.rm(path.join('out', f));
+for await (const f of (async function* () { for (const e of await fs.readdir('out', { recursive: true })) if (e.endsWith('.txt') && !e.endsWith('robots.txt') && !e.endsWith('llms.txt') && !/^[0-9a-f]{32}\.txt$/.test(e)) yield e; })()) await fs.rm(path.join('out', f));
 // framework chunks are no longer referenced by any page
 for (const f of await fs.readdir('out/_next/static/chunks')) if (f.endsWith('.js')) await fs.rm(path.join('out/_next/static/chunks', f));
 console.log(`strip-js: ${files} pages, ${(removed / 1024).toFixed(0)} KB of framework script removed`);
