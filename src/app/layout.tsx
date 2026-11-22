@@ -7,11 +7,11 @@ import { JsonLd } from '@/components/Bits';
 import { bookingLoader, headerScript } from '@/components/Book';
 
 const GTM_ID = 'GTM-P49QK3W3';
-/** Google Tag Manager, loaded after the page has finished loading so it never slows the first view.
+/** Google Tag Manager, loaded on the first scroll, tap or key press (or 5 seconds after the page loads) so it never slows the first view.
  *  Also sends the enquiry clicks to the dataLayer: book_click, whatsapp_click, phone_click, email_click, directions_click. */
 const gtmScript = `window.dataLayer=window.dataLayer||[];dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'});
 (function(){function l(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=${GTM_ID}';document.head.appendChild(s)}
-if(document.readyState==='complete')l();else addEventListener('load',l,{once:true});
+var go=false;function g(){if(go)return;go=true;l()}['scroll','pointerdown','keydown','touchstart'].forEach(function(e){addEventListener(e,g,{once:true,passive:true})});addEventListener('load',function(){setTimeout(g,5000)},{once:true});
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'',ev=null;
 var u=h.toLowerCase();if(u.indexOf('wa.me')>-1||u.indexOf('whatsapp')>-1)ev='whatsapp_click';else if(u.indexOf('tel:')===0)ev='phone_click';else if(u.indexOf('mailto:')===0)ev='email_click';
 else if(u.indexOf('maps.google')>-1||u.indexOf('/maps')>-1||u.indexOf('goo.gl/maps')>-1)ev='directions_click';else if(u.indexOf('rates-booking')>-1||a.hasAttribute('data-book'))ev='book_click';

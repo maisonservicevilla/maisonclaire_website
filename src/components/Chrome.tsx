@@ -62,8 +62,9 @@ export function Header({ current, over = false }: { current?: string; over?: boo
 
 const footerCols: { title: string; links: [string, string][] }[] = [
   { title: 'The villa', links: [['/the-villa/', 'The villa'], ['/bedrooms/', 'Bedrooms'], ['/private-pool/', 'Private pool'], ['/kitchen-dining/', 'Kitchen & dining'], ['/living-spaces/', 'Living spaces'], ['/gallery/', 'Gallery']] },
-  { title: 'Stay with us', links: [['/rates-booking/', 'Rates & booking'], ['/family-holiday-villa-wayanad/', 'Family holidays'], ['/group-stay-villa-wayanad/', 'Group stays'], ['/weekend-villa-wayanad/', 'Weekend getaways'], ['/reviews/', 'Guest reviews'], ['/house-rules/', 'House rules']] },
-  { title: 'Wayanad', links: [['/location/', 'Location'], ['/meppadi/', 'Staying in Meppadi'], ['/things-to-do-near-meppadi/', 'Things to do'], ['/900-kandi-glass-bridge/', '900 Kandi glass bridge'], ['/kanthanpara-waterfalls/', 'Kanthanpara Falls'], ['/bangalore-to-wayanad/', 'Bangalore to Wayanad'], ['/wayanad-travel-update/', 'Travel update']] },
+  { title: 'Stay with us', links: [['/rates-booking/', 'Rates & booking'], ['/family-holiday-villa-wayanad/', 'Family holidays'], ['/group-stay-villa-wayanad/', 'Group stays'], ['/weekend-villa-wayanad/', 'Weekend getaways'], ['/christmas-new-year-villa-wayanad/', 'Christmas & New Year'], ['/villa-for-12-guests-wayanad/', 'Villa for 12 guests'], ['/reviews/', 'Guest reviews'], ['/house-rules/', 'House rules']] },
+  { title: 'Wayanad', links: [['/location/', 'Location'], ['/meppadi/', 'Staying in Meppadi'], ['/things-to-do-near-meppadi/', 'Things to do'], ['/chembra-peak-trek/', 'Chembra Peak trek'], ['/900-kandi-glass-bridge/', '900 Kandi glass bridge'], ['/wayanad-3-day-itinerary/', '3-day itinerary'], ['/wayanad-travel-update/', 'Travel update']] },
+  { title: 'Plan your trip', links: [['/how-to-reach-wayanad/', 'How to reach Wayanad'], ['/bangalore-to-wayanad/', 'From Bangalore'], ['/calicut-to-wayanad/', 'From Kozhikode'], ['/best-time-to-visit-wayanad/', 'Best time to visit'], ['/where-to-stay-in-wayanad/', 'Where to stay'], ['/villa-vs-resort-wayanad/', 'Villa or resort?']] },
   { title: 'Help', links: [['/faq/', 'FAQ'], ['/contact/', 'Contact'], ['/privacy/', 'Privacy'], ['/terms/', 'Booking terms']] },
 ];
 

@@ -556,3 +556,28 @@ body:has(.bk-inline) { --bar-h: 0px; }
 .hero .trust-line { color: var(--linen); margin: 18px 0 0; } .hero .trust-line b { color: var(--paper); }
 
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+
+/* guide side card + related links */
+.stay-card { margin-top: 16px; background: var(--white); border: 1px solid #ddd4c2; border-radius: var(--radius); padding: 22px 24px; display: grid; gap: 10px; }
+.stay-card__t { font-family: var(--font-serif), Georgia, serif; font-weight: 300; font-size: 24px; line-height: 1.25; }
+.stay-card .btn { width: 100%; justify-content: center; }
+.stay-card .bk-alt { display: grid; gap: 8px; }
+.related { padding-bottom: var(--space); }
+.related ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0 32px; margin-top: 12px; }
+.related li { border-top: 1px solid var(--line); }
+.related a { display: block; padding: 14px 0; text-decoration: none; }
+.related a:hover { text-decoration: underline; }
+
+/* seasonal strip under the home hero */
+.season { display: block; background: var(--bark, #393225); color: var(--linen, #f3ede2); text-decoration: none; }
+.season__in { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; padding-block: 14px; }
+.season:hover span:last-child { text-decoration: underline; }
+
+/* comparison tables in guides: never push the page sideways on small phones */
+.prose table { width: 100%; border-collapse: collapse; font-size: 15px; margin-block: 20px; }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+.prose th { font-weight: 500; }
+@media (max-width: 599px) {
+  .prose table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 14px; }
+  .prose th, .prose td { min-width: 110px; }
+}

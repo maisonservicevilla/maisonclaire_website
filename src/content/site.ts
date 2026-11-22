@@ -78,11 +78,11 @@ export const site = {
   nearby: [
     { name: '900 Kandi glass bridge', km: 9, href: '/900-kandi-glass-bridge/' },
     { name: 'Kanthanpara Falls', km: 10, href: '/kanthanpara-waterfalls/' },
-    { name: 'Chembra Peak', km: 12 },
-    { name: 'Soochipara Falls', km: 15 },
-    { name: 'Lakkidi Viewpoint', km: 20 },
-    { name: 'Edakkal Caves', km: 24 },
-    { name: 'Karapuzha Dam', km: 24 },
+    { name: 'Chembra Peak', km: 12, href: '/chembra-peak-trek/' },
+    { name: 'Soochipara Falls', km: 15, href: '/soochipara-waterfalls/' },
+    { name: 'Lakkidi Viewpoint', km: 20, href: '/lakkidi-viewpoint/' },
+    { name: 'Edakkal Caves', km: 24, href: '/edakkal-caves/' },
+    { name: 'Karapuzha Dam', km: 24, href: '/karapuzha-dam/' },
   ] as { name: string; km: number; href?: string }[],
   everyday: [
     { name: 'Restaurants', dist: '200 m' },

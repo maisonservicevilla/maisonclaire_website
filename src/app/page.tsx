@@ -56,6 +56,10 @@ export default function Home() {
           </div>
         </section>
 
+        <a className="season" href="/christmas-new-year-villa-wayanad/">
+          <span className="wrap season__in"><span className="cap">Christmas &amp; New Year</span><span>Peak-season dates fill first. Plan your year-end stay <span aria-hidden="true">→</span></span></span>
+        </a>
+
         {/* 01 THE HOUSE */}
         <section className="section wrap">
           <Chapter n="01" label="The house">

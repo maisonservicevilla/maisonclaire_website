@@ -30,10 +30,12 @@ for await (const file of walk('out')) {
   html = html
     .replace(/<link rel="preload" as="script"[^>]*>/g, '')
     // preload only the two fonts used above the fold
-    .replace(/<link rel="preload" href="\/_next\/static\/media\/(cormorant_garamond_latin_300_italic|cormorant_garamond_latin_400_normal|jost_latin_500_normal)[^"]*" as="font"[^>]*\/?>/g, '')
+    .replace(/<link rel="preload" href="\/_next\/static\/media\/(cormorant_garamond_latin_400_normal|jost_latin_500_normal)[^"]*" as="font"[^>]*\/?>/g, '')
     .replace(/<script src="\/_next\/[^"]*"[^>]*><\/script>/g, '')
     .replace(/<script id="_R_">[\s\S]*?<\/script>/g, '')
     .replace(/<script>[\s\S]*?<\/script>/g, '');
+  // text-hero pages set an italic word in the h1 above the first photo: preload it so the photo does not shift
+  if (html.includes('logo--paper')) html = html.replace(/<link rel="preload" href="\/_next\/static\/media\/cormorant_garamond_latin_300_italic[^"]*" as="font"[^>]*\/?>/g, '');
   html = await inlineCss(html);
   if (/\/_next\/static\/chunks\/[^"]+\.js/.test(html)) throw new Error('Leftover JS chunk in ' + file);
   removed += before - html.length; files++;

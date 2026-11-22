@@ -34,10 +34,13 @@ export default function Page() {
             <div className="c-1-4 stack"><p className="cap cap--pool">01 — Getting here</p><h2 className="d2">By road, <em>through the ghats</em></h2></div>
             <dl className="c-6-7 ledger">
               <div><dt className="d4">From Kalpetta</dt><dd style={{ margin: 0 }}>About 12 km to Meppadi</dd></div>
-              <div><dt className="d4">From Kozhikode</dt><dd style={{ margin: 0 }}>Up the Thamarassery ghat, via Lakkidi</dd></div>
+              <div><dt className="d4">From Kozhikode</dt><dd style={{ margin: 0, textAlign: 'right' }}>About 76 km, up the Thamarassery ghat · <a href="/calicut-to-wayanad/">route guide</a></dd></div>
+              <div><dt className="d4">From Kochi</dt><dd style={{ margin: 0, textAlign: 'right' }}>About 250 km · <a href="/kochi-to-wayanad/">route guide</a></dd></div>
+              <div><dt className="d4">From Mysuru</dt><dd style={{ margin: 0, textAlign: 'right' }}>Through Bandipur, closed 9 PM–6 AM · <a href="/mysore-to-wayanad/">route guide</a></dd></div>
+              <div><dt className="d4">From Kannur, Malappuram, Ooty</dt><dd style={{ margin: 0, textAlign: 'right' }}><a href="/kannur-to-wayanad/">Kannur</a> · <a href="/malappuram-to-wayanad/">Malappuram</a> · <a href="/ooty-to-wayanad/">Ooty</a></dd></div>
               <div><dt className="d4">From Bangalore</dt><dd style={{ margin: 0, textAlign: 'right' }}>280–310 km via Mysuru · <a href="/bangalore-to-wayanad/">route guide</a></dd></div>
               <div><dt className="d4">By train</dt><dd style={{ margin: 0 }}>Kozhikode station, about 78 km</dd></div>
-              <div><dt className="d4">By air</dt><dd style={{ margin: 0 }}>Calicut airport, about 87 km</dd></div>
+              <div><dt className="d4">By air</dt><dd style={{ margin: 0, textAlign: 'right' }}>Calicut airport, about 87 km · <a href="/how-to-reach-wayanad/">all ways to reach Wayanad</a></dd></div>
             </dl>
           </div>
           <p className="wrap small" style={{ marginTop: 16 }}>Distances are to Meppadi town and approximate.</p>
@@ -64,7 +67,7 @@ export default function Page() {
             </div>
             <div className="c-9-4 note stack-s">
               <p className="cap cap--pool">Travel update</p>
-              <p className="body">Before a trip in the rainy months, check our <a href="/wayanad-travel-update/">Wayanad travel update</a> for road and weather notes.</p>
+              <p className="body">Before a trip in the rainy months, check our <a href="/wayanad-travel-update/">Wayanad travel update</a> for road and weather notes, and read about the <a href="/best-time-to-visit-wayanad/">best time to visit</a>.</p>
             </div>
           </div>
         </section>

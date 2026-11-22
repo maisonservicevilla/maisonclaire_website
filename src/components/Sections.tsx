@@ -7,7 +7,7 @@ export function BookingBand({ title = 'Check dates for your stay', text = 'Choos
     <section className="band-dark section--tight" aria-labelledby="book-band">
       <div className="wrap g12" style={{ alignItems: 'center' }}>
         <div className="c-1-5 stack">
-          <img src="/brand/mark-cream.svg" alt="" width={56} height={56} loading="lazy" style={{ width: 56, height: 'auto' }} />
+          <img src="/brand/mark-cream.svg" alt="Maison Claire" width={56} height={56} loading="lazy" style={{ width: 56, height: 'auto' }} />
           <h2 id="book-band" className="d2">{title}</h2>
           <p style={{ color: 'var(--linen)' }}>{text}</p>
           <p className="small">Prefer to talk first?</p>

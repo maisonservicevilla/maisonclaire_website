@@ -41,7 +41,7 @@ export function NextChapter({ href, title, img, alt }: { href: string; title: st
           <p className="cap cap--muted" style={{ marginBottom: 10 }}>Next</p>
           <p className="next__t">{title.split(' ').slice(0, -1).join(' ')}{title.includes(' ') ? ' ' : ''}<span className="nowrap">{title.split(' ').slice(-1)[0]}{'\u00a0'}<em aria-hidden="true">→</em></span></p>
         </div>
-        <div className="ph ratio-169"><Img name={img} alt={alt || ''} sizes="320px" /></div>
+        <div className="ph ratio-169"><Img name={img} alt={alt || title} sizes="320px" /></div>
       </div>
     </a>
   );

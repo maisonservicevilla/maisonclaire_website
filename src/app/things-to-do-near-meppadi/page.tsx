@@ -32,7 +32,7 @@ export default function Page() {
             <Crumbs items={[['/things-to-do-near-meppadi/', 'Things to do']]} />
             <h1 className="d1" style={{ fontSize: 'clamp(42px, 6.2vw, 92px)' }}>Things to do <em>near Meppadi</em></h1>
             <p className="lead">Seven places within 25 km of the villa, from easy waterfall walks to a full-day peak trek. Distances are by road from Maison Claire.</p>
-            <p className="updated">Updated 27 October 2026</p>
+            <p className="updated">Updated 22 November 2026</p>
           </div>
           <div className="mosaic" aria-label="Photos of places near Meppadi">
             <figure className="mosaic__a"><Img name="place-chembra" alt="The heart-shaped lake on the Chembra Peak trek" priority sizes="(min-width: 900px) 40vw, 100vw" /></figure>
@@ -98,6 +98,13 @@ export default function Page() {
           </div>
           <p className="small" style={{ marginTop: 32, maxWidth: 760 }}>Opening times and entry rules at forest sites change with the season and the weather. Check on the day, especially in the rains. See the <a href="/wayanad-travel-update/">travel update</a>. Photos of the places are from Wikimedia Commons, credited under each one.</p>
         </section>
+
+        <nav className="wrap related" aria-labelledby="ttd-more">
+          <p id="ttd-more" className="cap cap--pool">More guides for your trip</p>
+          <ul className="x">
+            {([['/banasura-sagar-dam/', 'Banasura Sagar Dam and its boats'], ['/pookode-lake/', 'Pookode Lake'], ['/wayanad-3-day-itinerary/', 'A 3-day Wayanad itinerary'], ['/wayanad-with-kids/', 'Wayanad with children'], ['/best-time-to-visit-wayanad/', 'Best time to visit Wayanad'], ['/how-to-reach-wayanad/', 'How to reach Wayanad']] as [string, string][]).map(([h, t]) => <li key={h}><a href={h}>{t} <span aria-hidden="true">→</span></a></li>)}
+          </ul>
+        </nav>
 
         {/* Plan a day */}
         <section className="section band-mist" aria-labelledby="plan">
